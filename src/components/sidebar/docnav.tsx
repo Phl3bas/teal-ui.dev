@@ -1,10 +1,10 @@
-import { graphql, Link, useStaticQuery } from "gatsby";
-import { list } from "postcss";
+import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import { NavList } from "./NavList";
 
 type NavItemObjectType = {
-  [key: string]: { title: string; path: string };
+  title: string;
+  path: string;
 };
 
 type QueryNode = {
@@ -40,7 +40,7 @@ export const DocNav = (): JSX.Element => {
         ...acc,
         [title]: {
           title: capitalize(title),
-          slug: `/${basePath}/${slug}`,
+          path: `/${basePath}/${slug}`,
         },
       };
     }, {});
@@ -55,7 +55,9 @@ export const DocNav = (): JSX.Element => {
 
   const pages = createPageList(query, "docs");
 
-  const gettingStarted: NavItemObjectType[] = [];
+  const gettingStarted: NavItemObjectType[] = [
+    { title: "Overview", path: "/docs/" },
+  ];
 
   const tokens: NavItemObjectType[] = [pages["palette"]];
 
