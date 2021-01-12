@@ -1,21 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import { NavList } from "./NavList";
-
-type NavItemObjectType = {
-  title: string;
-  path: string;
-};
-
-type QueryNode = {
-  node: { slug: string };
-};
-
-type QueryType = {
-  allMdx: {
-    edges: QueryNode[];
-  };
-};
+import { createPageList } from "../../utils";
 
 export const DocNav = (): JSX.Element => {
   const query: QueryType = useStaticQuery(graphql`
@@ -30,38 +16,35 @@ export const DocNav = (): JSX.Element => {
     }
   `);
 
-  const createPageList = (query: QueryType, basePath: string) => {
-    return query.allMdx.edges.reduce((acc, cur) => {
-      let slug = cur.node.slug;
-      let slugArr = cur.node.slug.split("/");
-      let title = slugArr[slugArr.length - 1];
-
-      return {
-        ...acc,
-        [title]: {
-          title: capitalize(title),
-          path: `/${basePath}/${slug}`,
-        },
-      };
-    }, {});
-  };
-
-  const capitalize = (text: string) =>
-    text
-      .toLowerCase()
-      .split(" ")
-      .map((word) => word[0].toUpperCase() + word.slice(1))
-      .join();
-
   const pages = createPageList(query, "docs");
 
   const gettingStarted: NavItemObjectType[] = [
     { title: "Overview", path: "/docs/" },
   ];
 
-  const tokens: NavItemObjectType[] = [pages["palette"]];
+  const tokens: NavItemObjectType[] = [
+    { title: "Overview", path: pages["overview-tokens"].path },
+    pages["palette"],
+    pages["scale"],
+    pages["elevation"],
+    pages["radius"],
+    pages["eases"],
+  ];
 
-  const elements: NavItemObjectType[] = [pages["buttons"]];
+  const elements: NavItemObjectType[] = [
+    { title: "Overview", path: pages["overview-elements"].path },
+    pages["reset"],
+    pages["typography"],
+    pages["headings"],
+    pages["lists"],
+    pages["buttons"],
+    pages["blockquotes"],
+    pages["code"],
+    pages["summary"],
+    pages["tables"],
+    pages["forms"],
+    pages["address"],
+  ];
 
   const css: NavItemObjectType[] = [];
 
@@ -78,10 +61,19 @@ export const DocNav = (): JSX.Element => {
   return (
     <div>
       {Object.keys(navigation).map((key) => (
-        <div key={key}>
-          <h5>{key}</h5>
-          <NavList list={navigation[key]} />
-        </div>
+        <>
+          <div key={key}>
+            <h5
+              style={{
+                color: "var(--tl-black-000)",
+                marginBlockEnd: "var(--tl-size-2)",
+              }}
+            >
+              {key}
+            </h5>
+            <NavList list={navigation[key]} />
+          </div>
+        </>
       ))}
     </div>
   );

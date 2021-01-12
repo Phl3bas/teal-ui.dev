@@ -28,9 +28,18 @@ export const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <Link to="/">
-          <TealLogo width="200" />
-        </Link>
+        <div
+          className="flex"
+          style={{
+            color: "var(--tl-cool-grey-300)",
+          }}
+        >
+          <Link to="/">
+            <TealLogo width="200" />
+          </Link>
+          <p>docs</p>
+        </div>
+
         <div
           style={{
             display: "flex",

@@ -1,28 +1,18 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import FourZeroFour from "../assets/svg/fourzerofour.svg";
 
 const NotFoundPage = () => {
   return (
-    <main>
-      <title>Not found</title>
-      <h1>Page not found</h1>
-      <p>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
+    <main className="h-100vh container mx-auto flex flex:col flex:justify-center flex:align-center">
+      <FourZeroFour width="700" />
+      <p style={{ color: "var(--tl-grey-700)", fontSize: "var(--tl-size-11)" }}>
+        Sorry, the page you tried to navigate to doesnt exist
       </p>
+      <Link role="button" className="bg:primary text:white" to="/">
+        Go home
+      </Link>
+      .
     </main>
   );
 };

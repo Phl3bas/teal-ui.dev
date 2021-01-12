@@ -3,6 +3,33 @@ title: Buttons
 package: elements
 ---
 
+<div>
+  <button>Button</button>
+  <button disabled>Disabled</button>
+</div>
+
+<div>
+  <a role="button" href="/">
+    Link Button
+  </a>
+  <a role="button" href="">
+    Disabled Link
+  </a>
+</div>
+
 <button style={{ backgroundColor: "var(--tl-teal-500)", color: "white" }}>
-  click me
+  Styled Button
 </button>
+
+<button
+  style={{
+    backgroundColor: "var(--tl-teal-500)",
+    color: "white",
+    width: "100%",
+  }}
+>
+  Long Styled Button
+</button>
+
+<input type="submit" value="input submit" />
+<input type="button" value="input button" />
