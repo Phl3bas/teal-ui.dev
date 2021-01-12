@@ -57,7 +57,7 @@ module.exports = {
         name: "markdown",
         path: "src/pages/docs",
       },
-      __key: "images",
+      __key: "markdown",
     },
   ],
 };
