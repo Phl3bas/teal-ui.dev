@@ -36,12 +36,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     icon: "/src/images/icon.png",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/svg/logo.simple.svg",
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
