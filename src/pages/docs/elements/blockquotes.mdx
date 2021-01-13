@@ -1,17 +1,53 @@
-### blockquotes
+---
+title: "Blockquotes"
+description: "An opinionated yet flexible solution to blockquotes"
+---
 
+import { ExampleCard } from "../../../components/examplecard";
+
+##### Basic Blockquote
+
+```html
 <blockquote>
   This is some blockquote text to use as an example. This example just has raw
   text inside, this keeps base text styling.
 </blockquote>
+```
 
+<ExampleCard>
+  <blockquote>
+    This is some blockquote text to use as an example. This example just has raw
+    text inside, this keeps base text styling.
+  </blockquote>
+</ExampleCard>
+
+---
+
+##### Enhanced Blockquote
+
+```html
 <blockquote>
   <p>
     This is some blockquote text to use as an example, This example has a
     paragraph inside, and now we get some extra styling!
   </p>
 </blockquote>
+```
 
+<ExampleCard>
+  <blockquote>
+    <p>
+      This is some blockquote text to use as an example, This example has a
+      paragraph inside, and now we get some extra styling!
+    </p>
+  </blockquote>
+</ExampleCard>
+
+---
+
+##### Footers
+
+```html
 <blockquote>
   <p>
     This is some blockquote text to use as an example, This example has a footer
@@ -19,35 +55,85 @@
   </p>
   <footer>- Sepp Wikramaratna-Clarke</footer>
 </blockquote>
+```
 
-<blockquote
-  style={{ "--tl-blockquote-highlight": "var(--tl-semantic-attention)" }}
->
-  <p>
-    This is some blockquote text to use as an example, We can change the side
-    border color with `--tl-blockquote-highlight`
-  </p>
-  <footer>- Sepp Wikramaratna-Clarke</footer>
-</blockquote>
+<ExampleCard>
+  <blockquote>
+    <p>
+      This is some blockquote text to use as an example, This example has a
+      footer tag at the bottom so we can attribute some text to someone!
+    </p>
+    <footer>- Sepp Wikramaratna-Clarke</footer>
+  </blockquote>
+</ExampleCard>
 
-<blockquote style={{ "--tl-blockquote-highlight-width": "var(--tl-size-12)" }}>
-  <p>
-    This is some blockquote text to use as an example, We can change the side
-    border width with `--tl-blockquote-highlight-width`
-  </p>
-  <footer>- Sepp Wikramaratna-Clarke</footer>
-</blockquote>
+#### Token Customisation
 
-<blockquote
-  style={{
-    "--tl-blockquote-leftquotee": "none",
-    "--tl-blockquote-rightquote": "none",
-  }}
->
-  <p>
-    This is some blockquote text to use as an example, We can remove the
-    "quotes" by changing --tl-blockquote-leftquote and
-    --tl-blockquote-rightquote to "none"
-  </p>
-  <footer>- Sepp Wikramaratna-Clarke</footer>
-</blockquote>
+##### Highlight
+
+```css
+blockquote {
+  --tl-blockquote-highlight: var(--tl-semantic-attention);
+}
+```
+
+<ExampleCard>
+  <blockquote
+    style={{ "--tl-blockquote-highlight": "var(--tl-semantic-attention)" }}
+  >
+    <p>
+      This is some blockquote text to use as an example, We can change the side
+      border color with <code>--tl-blockquote-highlight</code>
+    </p>
+    <footer>- Sepp Wikramaratna-Clarke</footer>
+  </blockquote>
+</ExampleCard>
+
+---
+
+##### Highlight Width
+
+```css
+blockquote {
+  --tl-blockquote-highlight-width: var(--tl-size-12);
+}
+```
+
+<ExampleCard>
+  <blockquote
+    style={{ "--tl-blockquote-highlight-width": "var(--tl-size-12)" }}
+  >
+    <p>
+      This is some blockquote text to use as an example, We can change the size
+      border width with <code>--tl-blockquote-highlight-width</code>
+    </p>
+    <footer>- Sepp Wikramaratna-Clarke</footer>
+  </blockquote>
+</ExampleCard>
+
+---
+
+##### Removing the default quotes
+
+```css
+blockquote {
+  --tl-blockquote-leftquote: none;
+  --tl-blockquote-rightquote: none;
+}
+```
+
+<ExampleCard>
+  <blockquote
+    style={{
+      "--tl-blockquote-leftquotee": "none",
+      "--tl-blockquote-rightquote": "none",
+    }}
+  >
+    <p>
+      This is some blockquote text to use as an example, We can remove the
+      "quotes" by changing <code>--tl-blockquote-leftquote</code> and
+      <code>--tl-blockquote-rightquote</code> to <code>"none"</code>
+    </p>
+    <footer>- Sepp Wikramaratna-Clarke</footer>
+  </blockquote>
+</ExampleCard>

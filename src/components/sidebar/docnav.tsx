@@ -19,7 +19,7 @@ export const DocNav = (): JSX.Element => {
   const pages = createPageList(query, "docs");
 
   const gettingStarted: NavItemObjectType[] = [
-    { title: "Overview", path: "/docs/" },
+    { title: "Overview", path: "/docs" },
   ];
 
   const tokens: NavItemObjectType[] = [
@@ -46,9 +46,9 @@ export const DocNav = (): JSX.Element => {
     pages["address"],
   ];
 
-  const css: NavItemObjectType[] = [];
+  const css: NavItemObjectType[] = [{ title: "Coming Soon", path: "" }];
 
-  const components: NavItemObjectType[] = [];
+  const components: NavItemObjectType[] = [{ title: "Coming Soon", path: "" }];
 
   const navigation = {
     "Getting Started": gettingStarted,
@@ -60,20 +60,18 @@ export const DocNav = (): JSX.Element => {
 
   return (
     <div>
-      {Object.keys(navigation).map((key) => (
-        <>
-          <div key={key}>
-            <h5
-              style={{
-                color: "var(--tl-black-000)",
-                marginBlockEnd: "var(--tl-size-2)",
-              }}
-            >
-              {key}
-            </h5>
-            <NavList list={navigation[key]} />
-          </div>
-        </>
+      {Object.keys(navigation).map((key, i) => (
+        <div key={i}>
+          <h5
+            style={{
+              color: "var(--tl-black-000)",
+              marginBlockEnd: "var(--tl-size-2)",
+            }}
+          >
+            {key}
+          </h5>
+          <NavList list={navigation[key]} />
+        </div>
       ))}
     </div>
   );

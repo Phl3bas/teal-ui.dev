@@ -12,3 +12,5 @@ type NavItemObjectType = {
   title: string;
   path: string;
 };
+
+type TealValueObject = { [key: string]: { [key: string]: string } };

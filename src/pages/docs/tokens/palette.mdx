@@ -1,6 +1,27 @@
 ---
-title: Palette
-package: tokens
+title: "Palette"
+description: "A curated set of Design-Tokens to bring a splash of color to your projects."
 ---
 
-some color stuff
+import {
+  Palette,
+  mainColors,
+  semanticColors,
+  brandColors,
+} from "../../../components/palette";
+
+### Main Color Palette
+
+<Palette colors={mainColors} shouldSort />
+
+---
+
+### Semantic Color Palette
+
+<Palette colors={semanticColors} />
+
+---
+
+### Brand Color Palette
+
+<Palette colors={brandColors} />

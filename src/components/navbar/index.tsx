@@ -12,7 +12,7 @@ export const Navbar = () => {
         height: "3rem",
         top: 0,
         background: "white",
-        boxShadow: "0 2px 20px 8px rgba(200,200,200,0.15)",
+        boxShadow: "0 4px 20px 1px rgba(200,200,200,0.15)",
         alignItems: "center",
         zIndex: 10000,
         padding: "0.5rem",

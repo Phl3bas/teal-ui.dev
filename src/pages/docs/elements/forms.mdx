@@ -1,9 +1,13 @@
+---
+title: "Forms"
+description: "A beautifully desgined and consistant reset of HTML forms and input elements. Forms dont have to be a pain to style anymore! "
+---
+
+import { ExampleCard } from "../../../components/examplecard";
+
 ### forms
 
 ```html
-
-```
-
 <form>
   <label>firstname</label>
   <input type="text" name="firstname" placeholder="John" />
@@ -13,12 +17,30 @@
   <input type="email" name="email" placeholder="example@email.com" />
   <label>email</label>
   <select>
-    <option disabled value="">
-      Pick an Option:
-    </option>
+    <option disabled selected value="">Pick an Option:</option>
     <option value="One">Option One</option>
     <option value="Two">Option Two</option>
   </select>
   <input type="submit" />
-
 </form>
+```
+
+<ExampleCard>
+  <form>
+    <label>firstname</label>
+    <input type="text" name="firstname" placeholder="John" />
+    <label>surname</label>
+    <input type="text" name="surname" placeholder="Doe" />
+    <label>email</label>
+    <input type="email" name="email" placeholder="example@email.com" />
+    <label>email</label>
+    <select>
+      <option disabled selected value="">
+        Pick an Option:
+      </option>
+      <option value="One">Option One</option>
+      <option value="Two">Option Two</option>
+    </select>
+    <input type="submit" />
+  </form>
+</ExampleCard>

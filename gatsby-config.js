@@ -12,7 +12,7 @@ module.exports = {
       options: {
         extentions: [".md", ".mdx"],
         defaultLayouts: {
-          default: require.resolve("./src/layouts/documentation.tsx"),
+          default: require.resolve("./src/layouts/docs/index.tsx"),
         },
       },
     },
@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/assets/svg/logo.simple.svg",
+        icon: "src/assets/svg/favicon.svg",
       },
     },
     "gatsby-transformer-sharp",
@@ -58,6 +58,14 @@ module.exports = {
         path: "src/pages/docs",
       },
       __key: "markdown",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "src/pages",
+      },
+      __key: "pages",
     },
   ],
 };

@@ -1,35 +1,156 @@
 ---
-title: Buttons
-package: elements
+title: "Buttons"
+description: "A beautifully designed button reset, which enforces semantic html."
 ---
 
-<div>
-  <button>Button</button>
-  <button disabled>Disabled</button>
-</div>
+import { ExampleCard } from "../../../components/examplecard";
 
-<div>
-  <a role="button" href="/">
-    Link Button
-  </a>
-  <a role="button" href="">
-    Disabled Link
-  </a>
-</div>
+##### Basic Button
 
-<button style={{ backgroundColor: "var(--tl-teal-500)", color: "white" }}>
-  Styled Button
-</button>
+TealUI believes that button stylings are the heart and soul of a design system, and quite frankly the plain html button shipped in browsers, doesn't quite cut it.
 
-<button
-  style={{
-    backgroundColor: "var(--tl-teal-500)",
-    color: "white",
-    width: "100%",
-  }}
->
-  Long Styled Button
-</button>
+**Elements** provides you with a full redesign of the html button element. Our design is based upon many "modern" button styles shipped with most websites today.
 
+We've styled our buttons this way, as we believe most of the time developers will be trying to style their button to look something like this anyway. So we've cut out the base leg work for you, so you can work on making the changes which makes your sites buttons unique rather than battling to override the base browser styles.
+
+Our buttons come with a very subtle hover, focus and disabled states. which are easily overridden using our token system.
+
+```html
+<button>Button</button> <button disabled>Disabled</button>
+```
+
+<ExampleCard>
+  <div>
+    <button>Button</button>
+    <button disabled>Disabled</button>
+  </div>
+</ExampleCard>
+
+---
+
+##### Button links
+
+Styling a link to look like a button is a common design pattern and Elements makes that super easy for you, and actually encourages semantic/accessible html!
+
+To style your anchor tag to have the base button stylings, simply add a `role="button"` attribute to the element. This is considered best practice in regards to writing
+semantic and accessible markup.
+
+if you need your link to look like a disabled button, simple set the href to a empty string `href=""` or remove the href attribute all together
+
+```html
+<a role="button" href="/"> Link Button </a>
+<a role="button" href=""> Disabled Link </a>
+```
+
+<ExampleCard>
+  <div>
+    <a role="button" href="/">
+      Link Button
+    </a>
+    <a role="button">Disabled Link</a>
+  </div>
+</ExampleCard>
+
+---
+
+##### Styling your buttons
+
+As **Elements** restyles just the base html elements, there isn't an issue with specificity. Any class added to the elements should automatically have the higher specificity and should override any base values.
+
+This means that styling a button takes less css on your part, as **Elements** does a lot of the leg work to make the button elements look like a button from a modern design standpoint. Usually just changing the background color, text color or border color or radius is enough to make your button look amazing.
+
+```css
+.colored-button {
+  backgroundcolor: var(--tl-teal-500);
+  color: var(--tl-white-000);
+}
+
+.pill-button {
+  backgroundcolor: var(--tl-semantic-danger);
+  color: var(--tl-white-000);
+  border-radius: var(--tl-radius-round);
+}
+
+.square-button {
+  backgroundcolor: var(--tl-brand-accent);
+  color: var(--tl-white-000);
+  border-adius: var(--tl-radius-none);
+}
+
+.outline-button {
+  background: var(--tl-white-000);
+  color: var(--tl-teal-600);
+  border: 1px solid var(--tl-teal-500);
+}
+```
+
+<ExampleCard>
+  <button
+    style={{
+      backgroundColor: "var(--tl-teal-500)",
+      color: "var(--tl-white-000)",
+    }}
+  >
+    Colored Button
+  </button>
+  <button
+    style={{
+      backgroundColor: "var(--tl-semantic-attention)",
+      color: "var(--tl-white-000)",
+      borderRadius: "var(--tl-radius-round)",
+    }}
+  >
+    Pill Button
+  </button>
+  <button
+    style={{
+      backgroundColor: "var(--tl-brand-accent)",
+      color: "var(--tl-white-000)",
+      borderRadius: "var(--tl-radius-none)",
+    }}
+  >
+    Square Button
+  </button>
+  <button
+    style={{
+      backgroundColor: "var(--tl-white-000)",
+      color: "var(--tl-teal-600)",
+      border: "1px solid var(--tl-teal-500)",
+      fontWeight: 500,
+    }}
+  >
+    Outline Button
+  </button>
+</ExampleCard>
+
+Need a button to be the full width of its container? nothing special is needed Just set its width to 100%!
+
+<ExampleCard>
+  <button
+    style={{
+      backgroundColor: "var(--tl-brand-accent-alt)",
+      color: "white",
+      width: "100%",
+    }}
+  >
+    This is a long button!
+  </button>
+</ExampleCard>
+
+---
+
+##### Input buttons
+
+for consistant styling, we've also taken the liberty of styling input elements which have `type="submit"` and `type="button"` to also have the same base button stylings.
+
+This keeps consistancy in the design all across your site, if you only wish to do the bare minimum styling yourself (**Elements** is amazing for the lazy developer!).
+
+```html
 <input type="submit" value="input submit" />
 <input type="button" value="input button" />
+```
+
+<ExampleCard>
+  <input type="submit" value="input submit" />
+  <input type="button" value="input button" />
+</ExampleCard>
