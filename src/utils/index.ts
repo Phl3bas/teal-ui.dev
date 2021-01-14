@@ -6,7 +6,7 @@ export const createPageList = (
     let slug = cur.node.slug;
     let slugArr = cur.node.slug.split("/");
     let title = slugArr[slugArr.length - 1];
-
+    console.log({ basePath, slug });
     return {
       ...acc,
       [title]: {

@@ -5,4 +5,18 @@ description: "A visually pleasing sizing scale to bring consistancy to your proj
 
 import { Scale } from "../../../components/scale";
 
+**Tokens** includes a pleasing numeric spacing scale base on the musical major 3rd scale, each value is roughtly 1.250x bigger than the previous value,
+which gives us this pleasing scale. We've decided the naming convension for the scale should stay in a linear number progression, while this does have drawbacks
+e.g. --tl-size-10 is not 2x bigger than --tl-size-5, it does mean less memorisation for the developer as they dont have to remember which values in the scale are valid numbers.
+
+##### Why not a proportional system?
+
+When deciding on our numeric system, we felt it would be best to stick to a linear numbering system to reduce the amount of gotchas, that a developer may face which other scale systems.
+
+For example, Tailwind.css uses proportional values in its naming, It's numeric scale has a 8,9,10,11,12 but no 13 it at that point goes up in 2's 12,14,16 untill 20 when it then changes to scaling by 4's
+we feel this which can be a small gottcha, and while proportional system has its pluses we've opted for a different system for this version. We've opted for a set linear numerical scale 0 - 25,
+any number value between than range is a valid size,
+
+### Default spacing scale
+
 <Scale />

@@ -27,7 +27,7 @@ export const Scale = () => {
                 <td style={{ display: "flex" }}>
                   <div
                     style={{
-                      background: "var(--tl-teal-400)",
+                      background: "var(--tl-teal-300)",
                       display: "flex",
                       height: "var(--tl-size-13)",
                       width: `var(--tl-size-${token})`,

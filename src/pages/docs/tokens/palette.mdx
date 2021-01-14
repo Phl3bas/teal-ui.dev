@@ -20,11 +20,11 @@ developers would either hit some decision paralysis when choosing colors, or end
 
 It also provides ready made tokens for Semantic uses and also for branding, which can tweeked at root level to add your own branding to your project.
 
-### Main Palette
+#### Tokens
 
 The Main Palette tokens adhear to the following naming formats.
 
-`--tl-{hue}-[number]` where hue is the generic hue name, and number is a range from 000 - 900 (or 000 - 300 for white and black) scaling in 100'semanticColors
+`--tl-{hue}-[number]` where hue is the generic hue name, and number is a range from 000 - 900 (or 000 - 300 for white and black) scaling in 100's
 
 e.g.
 
@@ -34,13 +34,17 @@ e.g.
 
 <br />
 
+---
+
+### Main Palette
+
 <Palette colors={mainColors} shouldSort />
 
 ---
 
 ### Default Semantic Palette
 
-**Tokens** provides the user with a 'semantic' palette. These are colors that are to have specific semantic meaning associated with them, these can be used in alerts, highlights or for button coloring to show meaning of certain actions.
+**Tokens** provides the user with a 'semantic' palette. These are colors that have specific semantic meaning associated with them, these can be used in alerts, highlights or for button coloring to show meaning of certain actions.
 
 <Palette colors={semanticColors} />
 
@@ -53,9 +57,11 @@ The branding palette provides the user with a ready made naming convension to us
 
 <Palette colors={brandColors} />
 
-### Overriding Default Palettes.
+---
 
-Overidding the default palettes is a very simple step which doesnt require a build set up.
+### Overriding Default Palettes
+
+Overriding the default palettes is a very simple process which doesnt require any build step.
 
 ```html
 <html>
@@ -73,7 +79,7 @@ Overidding the default palettes is a very simple step which doesnt require a bui
 ```
 
 <ExampleCard>
-  Step 1. - Add your own stylesheet linked in the head tag AFTER **Tokens**
+  Step 1. - Add your own stylesheet linked in the head tag AFTER <b>Tokens</b>
 </ExampleCard>
 
 ```css
@@ -88,8 +94,11 @@ Overidding the default palettes is a very simple step which doesnt require a bui
 ```
 
 <ExampleCard>
-  Step 2. - Add a `:root` pseudo element at the top of your stylesheet and
-  override the tokens values.
+  Step 2. - Add a
+  <p>
+    <code>:root</code>
+  </p>
+  pseudo element at the top of your stylesheet and override the tokens values.
 </ExampleCard>
 
 ```css
