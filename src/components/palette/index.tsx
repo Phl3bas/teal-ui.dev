@@ -8,25 +8,28 @@ interface Props {
 }
 
 export const mainColors = {
-  red: Colors.red,
-  pink: Colors.pink,
-  purple: Colors.purple,
-  indigo: Colors.indigo,
-  blue: Colors.blue,
-  teal: Colors.teal,
-  green: Colors.green,
-  yellow: Colors.yellow,
-  orange: Colors.orange,
-  black: Colors.black,
-  white: Colors.white,
+  red: Colors["red"],
+  pink: Colors["pink"],
+  purple: Colors["purple"],
+  indigo: Colors["indigo"],
+  blue: Colors["blue"],
+  teal: Colors["teal"],
+  green: Colors["green"],
+  yellow: Colors["yellow"],
+  orange: Colors["orange"],
+  grey: Colors["grey"],
+  "cool-grey": Colors["cool-grey"],
+  "warm-grey": Colors["warm-grey"],
+  black: Colors["black"],
+  white: Colors["white"],
 };
 
 export const semanticColors = {
-  semantic: Colors.semantic,
+  semantic: Colors["semantic"],
 };
 
 export const brandColors = {
-  brand: Colors.brand,
+  brand: Colors["brand"],
 };
 
 export const Palette = ({ colors, shouldSort = false }: Props) => {
