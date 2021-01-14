@@ -7,7 +7,7 @@ interface NavListItemProps {
 }
 const NavListItem = ({ title, path }: NavListItemProps) => {
   return (
-    <li key={title}>
+    <li>
       <Link
         style={{
           textDecoration: "none",
@@ -29,7 +29,7 @@ export const NavList = ({ list }: NavListProps) => {
   return (
     <ul style={{ listStyle: "none" }}>
       {list.map((item: NavItemObjectType) => (
-        <NavListItem title={item.title} path={item.path} />
+        <NavListItem key={item.title} title={item.title} path={item.path} />
       ))}
     </ul>
   );
