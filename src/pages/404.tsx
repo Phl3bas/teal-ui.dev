@@ -12,7 +12,6 @@ const NotFoundPage = () => {
       <Link role="button" className="bg:primary text:white" to="/">
         Go home
       </Link>
-      .
     </main>
   );
 };
