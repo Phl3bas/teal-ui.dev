@@ -10,7 +10,7 @@ const PageHeader = ({ title, description }: Props) => {
     <div
       style={{
         borderBlockEnd: "1px solid var(--tl-cool-grey-100)",
-        marginBlockEnd: "var(--tl-size-15)",
+        marginBlockEnd: "var(--tl-size-13)",
       }}
     >
       <h2
