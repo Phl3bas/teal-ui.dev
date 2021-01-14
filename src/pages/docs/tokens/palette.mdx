@@ -10,18 +10,96 @@ import {
   brandColors,
 } from "../../../components/palette";
 
-### Main Color Palette
+import { ExampleCard } from "../../../components/examplecard";
+
+One issue many developers may find when designing their own project it deciding which colors to use. This is an understandable problem,
+with a regular RGB color palette available at their fingers they have 256<sup>3</sup> colors to chose from (16,777,216 unique colors). It's understandable that
+developers would either hit some decision paralysis when choosing colors, or end up creating a project that has no cohesion across its design palette.
+
+**Tokens** solves this by providing the user with a collection of curated color palette ready to use in your projects. This cuts the decision making from 166,777,216 colors to just 128 colors (a 99.9999% decrease!)
+
+It also provides ready made tokens for Semantic uses and also for branding, which can tweeked at root level to add your own branding to your project.
+
+### Main Palette
+
+The Main Palette tokens adhear to the following naming formats.
+
+`--tl-{hue}-[number]` where hue is the generic hue name, and number is a range from 000 - 900 (or 000 - 300 for white and black) scaling in 100'semanticColors
+
+e.g.
+
+`--tl-teal-500` will give you `#9E2020`
+
+`--tl-red-800` will give you `#259E9E`
+
+<br />
 
 <Palette colors={mainColors} shouldSort />
 
 ---
 
-### Semantic Color Palette
+### Default Semantic Palette
+
+**Tokens** provides the user with a 'semantic' palette. These are colors that are to have specific semantic meaning associated with them, these can be used in alerts, highlights or for button coloring to show meaning of certain actions.
 
 <Palette colors={semanticColors} />
 
 ---
 
-### Brand Color Palette
+### Default Brand Palette
+
+**Tokens** provides the user with a brand palette. The default is the branding colors for TealUI, which while you are free to use, the intent is that these values are to be overridden with you own particular branding scheme.
+The branding palette provides the user with a ready made naming convension to use within your project, all you have to do is pick your colors.
 
 <Palette colors={brandColors} />
+
+### Overriding Default Palettes.
+
+Overidding the default palettes is a very simple step which doesnt require a build set up.
+
+```html
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teal-ui/tokens@x.x.x/teal-tokens.css"
+    />
+    <link rel="stylesheet" href="./myStyles.css" />
+  </head>
+  <body>
+    <-- .... -->
+  </body>
+</html>
+```
+
+<ExampleCard>
+  Step 1. - Add your own stylesheet linked in the head tag AFTER **Tokens**
+</ExampleCard>
+
+```css
+:root {
+  --tl-brand-primary: var(--tl-indigo-500);
+  --tl-brand-primary-alt: var(--tl-indigo-300);
+  --tl-brand-secondary: var(--tl-blue-400);
+  --tl-brand-secondary-alt: var(--tl-blue-200);
+  --tl-brand-accent: var(--tl-yellow-600);
+  --tl-brand-accent-alt: var(--tl-pink-400);
+}
+```
+
+<ExampleCard>
+  Step 2. - Add a `:root` pseudo element at the top of your stylesheet and
+  override the tokens values.
+</ExampleCard>
+
+```css
+.btn-primary {
+  background: var(--tl-brand-primary);
+  color: white;
+}
+```
+
+<ExampleCard>
+  Step 3. - Use the brand tokens thoughout your project, now with your own
+  colors assigned
+</ExampleCard>
