@@ -39,13 +39,15 @@ export default ({ pageContext, children }: Props) => {
               marginBottom: "10rem",
             }}
           >
-            {frontmatter && (
-              <PageHeader
-                title={frontmatter.title}
-                description={frontmatter.description}
-              />
-            )}
-            <div>{children}</div>
+            <div className="container mx:auto">
+              {frontmatter && (
+                <PageHeader
+                  title={frontmatter.title}
+                  description={frontmatter.description}
+                />
+              )}
+              {children}
+            </div>
           </div>
         </div>
       </main>

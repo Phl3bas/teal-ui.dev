@@ -7,10 +7,10 @@
 }
 
 .container {
-  width: 50em;
+  width: 55em;
 }
 
-.mx-auto {
+.mx\:auto {
   margin-left: auto;
   margin-right: auto;
 }
