@@ -10,15 +10,9 @@ const Box = ({ shadow, inset = false }: BoxProps) => {
 
   return (
     <div
+      className="grid bg:white-100 grid:place-center text:cool-grey-600 h-17"
       style={{
-        display: "grid",
-        height: "100px",
-
-        background: "var(--tl-white-100)",
         boxShadow: `var(${shadowToken}${shadow + (inset ? 1 : 0)})`,
-        placeContent: "center",
-        color: "var(--tl-cool-grey-600)",
-        fontSize: "var(--tl-size-11)",
       }}
     >
       {shadowToken}

@@ -8,27 +8,13 @@ interface Props {
 const PageHeader = ({ title, description }: Props) => {
   return (
     <div
+      className="mb-13"
       style={{
         borderBlockEnd: "1px solid var(--tl-cool-grey-100)",
-        marginBlockEnd: "var(--tl-size-13)",
       }}
     >
-      <h2
-        style={{
-          margin: 0,
-          color: "var(--tl-grey-900)",
-        }}
-      >
-        {title}
-      </h2>
-      <p
-        style={{
-          color: "var(--tl-grey-600)",
-          fontSize: "var(--tl-size-10)",
-        }}
-      >
-        {description}
-      </p>
+      <h2 className="m-0 text-grey-900">{title}</h2>
+      <p className="text:grey-600 text-10">{description}</p>
     </div>
   );
 };

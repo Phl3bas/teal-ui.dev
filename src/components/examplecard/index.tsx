@@ -7,11 +7,9 @@ interface Props {
 export const ExampleCard = ({ children }: Props) => {
   return (
     <div
+      className="py-14 px-13 shadow-2 mb-15"
       style={{
-        padding: "var(--tl-size-14) var(--tl-size-13)",
         borderRadius: " 0 0 var(--tl-radius-lg) var(--tl-radius-lg)",
-        boxShadow: "var(--tl-shadow-2)",
-        marginBlockEnd: "var(--tl-size-15)",
       }}
     >
       {children}

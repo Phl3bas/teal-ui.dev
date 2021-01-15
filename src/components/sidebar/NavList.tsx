@@ -8,13 +8,7 @@ interface NavListItemProps {
 const NavListItem = ({ title, path }: NavListItemProps) => {
   return (
     <li>
-      <Link
-        style={{
-          textDecoration: "none",
-          color: "var(--tl-cool-grey-600)",
-        }}
-        to={path}
-      >
+      <Link className="text-decoration:none text:cool-grey-600" to={path}>
         {title}
       </Link>
     </li>
@@ -27,7 +21,7 @@ interface NavListProps {
 
 export const NavList = ({ list }: NavListProps) => {
   return (
-    <ul style={{ listStyle: "none" }}>
+    <ul className="list:none">
       {list.map((item: NavItemObjectType) => (
         <NavListItem key={item.title} title={item.title} path={item.path} />
       ))}

@@ -6,53 +6,26 @@ import TealLogo from "../../assets/svg/logo.svg";
 export const Navbar = () => {
   return (
     <nav
+      className="flex sticky h-14 top-0 bg:white-000 flex:align-center p-7"
       style={{
-        display: "flex",
-        position: "sticky",
-        height: "3rem",
-        top: 0,
-        background: "white",
         boxShadow: "0 4px 20px 1px rgba(200,200,200,0.15)",
-        alignItems: "center",
         zIndex: 10000,
-        padding: "0.5rem",
       }}
     >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "80em",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div
-          className="flex"
-          style={{
-            color: "var(--tl-cool-grey-300)",
-          }}
-        >
+      <div className="flex flex:justify-between flex:align-center w-full container mx:auto">
+        <div className="flex text:cool-grey-300">
           <Link to="/">
             <TealLogo width="200" />
           </Link>
           <p>docs</p>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            minWidth: "10em",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="flex flex:align-center flex:justify-between w-10">
           <a href="https://github.com/Phl3bas/TealUI">
             <Github height="40" width="40" />
           </a>
           <form action="">
-            <select name="" id="" style={{ width: "5em" }}>
+            <select name="" id="" className="w-16">
               <option value="0.0.1">0.0.1</option>
             </select>
           </form>

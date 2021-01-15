@@ -3,7 +3,7 @@ import { Size } from "./scale";
 
 export const Scale = () => {
   return (
-    <div style={{ padding: "0 var(--tl-size-12)" }}>
+    <div className="py-0 px-12">
       <table>
         <thead>
           <tr>
@@ -28,19 +28,11 @@ export const Scale = () => {
                 <td>
                   <code>{Size.size[token]}</code>
                 </td>
-                <td
-                  style={{
-                    display: "flex",
-                    padding: "var(--tl-size-4)",
-                  }}
-                >
+                <td className="flex p-4">
                   <div
+                    className="flex bg:teal-300 h-13 r-sm"
                     style={{
-                      background: "var(--tl-teal-300)",
-                      display: "flex",
-                      height: "var(--tl-size-13)",
                       width: `var(--tl-size-${token})`,
-                      borderRadius: "var(--tl-radius-sm)",
                     }}
                   ></div>
                 </td>

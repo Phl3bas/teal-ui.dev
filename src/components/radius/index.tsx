@@ -5,15 +5,11 @@ const radiusValues = ["none", "xs", "sm", "md", "lg", "2xl", "3xl", "round"];
 const RadiusBox = ({ value }: { value: string }) => {
   return (
     <div
+      className="flex bg:teal-500 text:white text-10 flex:justify-center flex:align-center"
       style={{
         display: "flex",
         height: "150px",
         width: "150px",
-        background: "var(--tl-teal-500)",
-        color: "white",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: "var(--tl-size-10)",
         borderRadius: `var(--tl-radius-${value})`,
       }}
     >

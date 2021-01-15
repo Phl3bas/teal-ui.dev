@@ -34,50 +34,17 @@ export const brandColors = {
 
 export const Palette = ({ colors, shouldSort = false }: Props) => {
   return (
-    <div>
+    <div className="flex flex:col gap-8">
       {Object.keys(colors).map((hue) => (
         <div
+          className="flex w-full flex:align-center flex:justify-center"
           key={hue}
-          style={{
-            display: "flex",
-            maxWidth: "100%",
-
-            alignItems: "center",
-            justifyContent: "center",
-            marginBlockEnd: "var(--tl-size-10)",
-          }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "var(--tl-size-17)",
-              justifyContent: "space-around",
-              alignItems: "flex-end",
-            }}
-          >
-            <h6 style={{ margin: 0 }}>{capitalize(hue)}</h6>
-            <code
-              style={{
-                color: "var(--tl-cool-grey-500)",
-                margin: 0,
-                fontSize: "var(--tl-size-9)",
-              }}
-            >
-              --tl-{hue}
-            </code>
+          <div className="flex flex:col w-17 flex:justify-around flex:align-end">
+            <h6 className="m-0">{capitalize(hue)}</h6>
+            <code className="text:cool-grey-600 m-0 text-9">--tl-{hue}</code>
           </div>
-          <div
-            style={{
-              display: "flex",
-              gap: "var(--tl-size-4)",
-
-              marginInline: "var(--tl-size-10)",
-              justifyContent: "space-evenly",
-
-              flex: 1,
-            }}
-          >
+          <div className="flex gap-4 mx-10 flex:justify-even flex-1">
             {Object.keys(colors[hue])
               .sort(
                 (a, b) =>
@@ -89,29 +56,15 @@ export const Palette = ({ colors, shouldSort = false }: Props) => {
                 // number string keys dont come in order so need to sort them with localcompare to put them in numeric order.
               )
               .map((color) => (
-                <div
-                  key={color}
-                  style={{ display: "flex", flexDirection: "column" }}
-                >
+                <div key={color} className="flex flex:col">
                   <div
+                    className="r-md shadow-1 w-16 h-14"
                     style={{
-                      width: "70px",
-                      height: "50px",
                       background: colors[hue][color],
-                      borderRadius: "var(--tl-radius-md)",
-                      boxShadow: "var(--tl-shadow-1)",
                     }}
                   ></div>
-                  <p style={{ margin: 0, fontSize: "var(--tl-size-9)" }}>
-                    {color}
-                  </p>
-                  <p
-                    style={{
-                      color: "var(--tl-cool-grey-500)",
-                      margin: 0,
-                      fontSize: "var(--tl-size-9)",
-                    }}
-                  >
+                  <p className="m-0 text-9">{color}</p>
+                  <p className="m-0 text-9 text:cool-grey-500">
                     {colors[hue][color]}
                   </p>
                 </div>

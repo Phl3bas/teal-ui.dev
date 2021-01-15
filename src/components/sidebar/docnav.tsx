@@ -62,14 +62,7 @@ export const DocNav = (): JSX.Element => {
     <div>
       {Object.keys(navigation).map((key, i) => (
         <div key={i}>
-          <h5
-            style={{
-              color: "var(--tl-black-000)",
-              marginBlockEnd: "var(--tl-size-2)",
-            }}
-          >
-            {key}
-          </h5>
+          <h5 className="text:black-000 mb-2">{key}</h5>
           <NavList list={navigation[key]} />
         </div>
       ))}
