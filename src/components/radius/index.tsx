@@ -7,13 +7,13 @@ const RadiusBox = ({ value }: { value: string }) => {
     <div
       style={{
         display: "flex",
-        height: "200px",
-        width: "200px",
+        height: "150px",
+        width: "150px",
         background: "var(--tl-teal-500)",
         color: "white",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: "var(--tl-size-11)",
+        fontSize: "var(--tl-size-10)",
         borderRadius: `var(--tl-radius-${value})`,
       }}
     >
