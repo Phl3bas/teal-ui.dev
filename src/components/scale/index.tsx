@@ -22,9 +22,18 @@ export const Scale = () => {
             )
             .map((token) => (
               <tr>
-                <td>--tl-size-{token}</td>
-                <td>{Size.size[token]}</td>
-                <td style={{ display: "flex" }}>
+                <td>
+                  <code>--tl-size-{token}</code>
+                </td>
+                <td>
+                  <code>{Size.size[token]}</code>
+                </td>
+                <td
+                  style={{
+                    display: "flex",
+                    padding: "var(--tl-size-4)",
+                  }}
+                >
                   <div
                     style={{
                       background: "var(--tl-teal-300)",
