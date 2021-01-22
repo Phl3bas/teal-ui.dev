@@ -14,7 +14,7 @@ const PageHeader = ({ title, description }: Props) => {
       }}
     >
       <h2 className="m-0 text-grey-900">{title}</h2>
-      <p className="text:grey-600 text-10">{description}</p>
+      <p className="text-grey-600 text-body">{description}</p>
     </div>
   );
 };

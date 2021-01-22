@@ -1,6 +1,7 @@
 import "@teal-ui/tokens";
 import "@teal-ui/elements";
-import "./src/styles/utilities.css";
+import "@teal-ui/css";
+// import "./src/styles/utilities.css";
 import "./src/styles/index.css";
 
 import * as React from "react";

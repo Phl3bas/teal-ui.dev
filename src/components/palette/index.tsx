@@ -34,17 +34,17 @@ export const brandColors = {
 
 export const Palette = ({ colors, shouldSort = false }: Props) => {
   return (
-    <div className="flex flex:col gap-8">
+    <div className="flex-column">
       {Object.keys(colors).map((hue) => (
         <div
-          className="flex w-full flex:align-center flex:justify-center"
+          className="flex-row gap-10 mb-10 justifycontent-between alignitems-center flex-wrap"
           key={hue}
         >
-          <div className="flex flex:col w-17 flex:justify-around flex:align-end">
+          <div className="flex-column min-w-17 justifycontent-around alignitems-end">
             <h6 className="m-0">{capitalize(hue)}</h6>
-            <code className="text:cool-grey-600 m-0 text-9">--tl-{hue}</code>
+            <code className="text-cool-grey-600 m-0 text-sm">--tl-{hue}</code>
           </div>
-          <div className="flex gap-4 mx-10 flex:justify-even flex-1">
+          <div className="flex-row mx-10 justifycontent-even flex-1 flex-wrap">
             {Object.keys(colors[hue])
               .sort(
                 (a, b) =>
@@ -56,15 +56,15 @@ export const Palette = ({ colors, shouldSort = false }: Props) => {
                 // number string keys dont come in order so need to sort them with localcompare to put them in numeric order.
               )
               .map((color) => (
-                <div key={color} className="flex flex:col">
+                <div key={color} className="flex-column flex-auto">
                   <div
-                    className="r-md shadow-1 w-16 h-14"
+                    className="shadow-xs h-13"
                     style={{
                       background: colors[hue][color],
                     }}
                   ></div>
-                  <p className="m-0 text-9">{color}</p>
-                  <p className="m-0 text-9 text:cool-grey-500">
+                  <p className="m-0 text-sm">{color}</p>
+                  <p className="m-0 text-sm text-cool-grey-500">
                     {colors[hue][color]}
                   </p>
                 </div>

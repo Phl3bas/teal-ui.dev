@@ -7,16 +7,11 @@ h6 {
   color: var(--tl-grey-900);
 }
 
-hr {
-  border-top: 1px solid var(--tl-grey-100);
-  margin-block: var(--tl-size-15);
-}
-
 pre {
   --radius: var(--tl-radius-lg);
   background: var(--tl-cool-grey-900);
   color: white;
-  padding: var(--tl-size-14) var(--tl-size-14);
+  padding: var(--tl-size-14) var(--tl-size-14) var(--tl-size-10);
   border-radius: var(--radius) var(--radius) 0 0;
   margin-bottom: 0;
   margin-top: var(--tl-size-13);
@@ -27,7 +22,7 @@ td code {
   display: inline-block;
   background: var(--tl-cool-grey-900);
   color: white;
-  padding: var(--tl-size-0) var(--tl-size-7);
+  padding: var(--tl-size-0) var(--tl-size-4);
   border-radius: var(--tl-radius-sm);
 }
 
@@ -35,6 +30,10 @@ td code {
   background: transparent;
   color: var(--tl-black-000);
   font-size: 0.8rem;
+}
+
+thead tr th:first-child {
+  width: 10rem;
 }
 
 .play {
@@ -124,4 +123,84 @@ td code {
   to {
     margin-left: calc(100% - var(--tl-size-13));
   }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 80em;
+}
+
+.p-4 {
+  padding: var(--tl-size-4);
+}
+.p-7 {
+  padding: var(--tl-size-7);
+}
+.p-13 {
+  padding: var(--tl-size-13);
+}
+
+.py-0 {
+  padding-top: var(--tl-size-0);
+  padding-bottom: var(--tl-size-0);
+}
+.py-14 {
+  padding-top: var(--tl-size-14);
+  padding-bottom: var(--tl-size-14);
+}
+.px-7 {
+  padding-left: var(--tl-size-7);
+  padding-right: var(--tl-size-7);
+}
+.px-8 {
+  padding-left: var(--tl-size-8);
+  padding-right: var(--tl-size-8);
+}
+
+.px-12 {
+  padding-left: var(--tl-size-12);
+  padding-right: var(--tl-size-12);
+}
+.px-13 {
+  padding-left: var(--tl-size-13);
+  padding-right: var(--tl-size-13);
+}
+
+.pt-15 {
+  padding-top: var(--tl-size-15);
+}
+
+.simplebar-scrollbar::before {
+  background-color: red;
+}
+
+.mb-2 {
+  margin-bottom: var(--tl-size-2);
+}
+
+.mb-10 {
+  margin-bottom: var(--tl-size-10);
+}
+.mb-13 {
+  margin-bottom: var(--tl-size-13);
+}
+.mb-15 {
+  margin-bottom: var(--tl-size-15);
+}
+
+.mb-19 {
+  margin-bottom: var(--tl-size-19);
+}
+
+.primary-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--tl-teal-400) 0%,
+    var(--tl-green-200) 100%
+  );
+  color: var(--tl-white-000);
 }

@@ -18,15 +18,15 @@ export const Eases = ({ ease }: { ease: string }) => {
         <dl key={key}>
           <dt>{key}</dt>
           <li
-            className="list:none r-sm"
+            className="list-none br-xs"
             style={{
               border: "1px solid var(--tl-cool-grey-200)",
             }}
           >
             <div
               className={
-                `${ease}-${key} ${isPlaying ? "play" : ""}` +
-                "h-13 w-13 bg:teal-300 r-md pointer"
+                `${ease}-${key} ${isPlaying ? "play " : ""}` +
+                "h-13 w-13 primary-gradient br-md pointer"
               }
               onClick={onClick}
             ></div>

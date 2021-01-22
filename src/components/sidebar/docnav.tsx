@@ -46,7 +46,23 @@ export const DocNav = (): JSX.Element => {
     pages["address"],
   ];
 
-  const css: NavItemObjectType[] = [{ title: "Coming Soon", path: "" }];
+  const css: NavItemObjectType[] = [
+    { title: "Overview", path: pages["overview-css"].path },
+    pages["display"],
+    pages["position"],
+    pages["margin"],
+    pages["padding"],
+    pages["width"],
+    pages["height"],
+    pages["text"],
+    pages["background"],
+    pages["box-shadow"],
+    pages["flexbox"],
+    pages["grid"],
+    pages["gap"],
+    pages["content-positioning"],
+    pages["list-styling"],
+  ];
 
   const components: NavItemObjectType[] = [{ title: "Coming Soon", path: "" }];
 
@@ -62,7 +78,7 @@ export const DocNav = (): JSX.Element => {
     <div>
       {Object.keys(navigation).map((key, i) => (
         <div key={i}>
-          <h5 className="text:black-000 mb-2">{key}</h5>
+          <h5 className="text-black-300 mb-2">{key}</h5>
           <NavList list={navigation[key]} />
         </div>
       ))}

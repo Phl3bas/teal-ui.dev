@@ -46,6 +46,14 @@
 .min-w-21 {
   min-width: var(--tl-size-21);
 }
+
+.max-w-25 {
+  min-width: var(--tl-size-25);
+}
+
+.max-w-50\% {
+  min-width: 50%;
+}
 .w-5 {
   width: var(--tl-size-5);
 }
@@ -69,9 +77,14 @@
   width: 25%;
 }
 
-.container {
-  width: 80em;
+.max-w-full {
+  width: 100%;
 }
+
+.container {
+  max-width: 70%;
+}
+
 .gap-4 {
   gap: var(--tl-size-4);
 }

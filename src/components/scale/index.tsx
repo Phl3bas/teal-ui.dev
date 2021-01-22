@@ -3,12 +3,12 @@ import { Size } from "./scale";
 
 export const Scale = () => {
   return (
-    <div className="py-0 px-12">
+    <div>
       <table>
         <thead>
           <tr>
             <th>Token</th>
-            <th>Size</th>
+            <th className="min-w-16">Size</th>
             <th></th>
           </tr>
         </thead>
@@ -28,9 +28,9 @@ export const Scale = () => {
                 <td>
                   <code>{Size.size[token]}</code>
                 </td>
-                <td className="flex p-4">
+                <td className="flex-row p-4 justifycontent-start alignitems-center">
                   <div
-                    className="flex bg:teal-300 h-13 r-sm"
+                    className="flex-row primary-gradient h-13 br-sm"
                     style={{
                       width: `var(--tl-size-${token})`,
                     }}

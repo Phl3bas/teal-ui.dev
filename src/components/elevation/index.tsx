@@ -1,4 +1,5 @@
 import React from "react";
+import { ExampleCard } from "../examplecard";
 
 interface BoxProps {
   shadow: number;
@@ -10,7 +11,7 @@ const Box = ({ shadow, inset = false }: BoxProps) => {
 
   return (
     <div
-      className="grid bg:white-100 grid:place-center text:cool-grey-600 h-17"
+      className="grid bg-white-000 placecontent-center text-cool-grey-600 h-17"
       style={{
         boxShadow: `var(${shadowToken}${shadow + (inset ? 1 : 0)})`,
       }}
@@ -29,20 +30,17 @@ export const Elevation = ({
   count: number;
 }) => {
   return (
-    <div
-      style={{
-        display: "grid",
-        gap: "var(--tl-size-15)",
-        gridTemplateColumns: "1fr 1fr",
-        padding: "var(--tl-size-15)",
-        boxShadow: "var(--tl-shadow-1)",
-        borderRadius: "var(--tl-radius-md)",
-        marginBlockEnd: "var(--tl-size-15)",
-      }}
-    >
-      {[...new Array(count).keys()].map((i) => (
-        <Box shadow={i} inset={inset} />
-      ))}
-    </div>
+    <ExampleCard>
+      <div
+        className="grid gap-15 gridtemp-cols-2 p-15 shadow-1 br-md"
+        style={{
+          marginBlockEnd: "var(--tl-size-15)",
+        }}
+      >
+        {[...new Array(count).keys()].map((i) => (
+          <Box shadow={i} inset={inset} />
+        ))}
+      </div>
+    </ExampleCard>
   );
 };
