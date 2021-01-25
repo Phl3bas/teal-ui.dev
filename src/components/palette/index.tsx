@@ -56,9 +56,9 @@ export const Palette = ({ colors, shouldSort = false }: Props) => {
                 // number string keys dont come in order so need to sort them with localcompare to put them in numeric order.
               )
               .map((color) => (
-                <div key={color} className="flex-column flex-auto">
+                <div key={color} className="flex-column flex-auto mb-10">
                   <div
-                    className="shadow-xs h-13"
+                    className="shadow-xs h-13 min-w-15 max-w-22"
                     style={{
                       background: colors[hue][color],
                     }}

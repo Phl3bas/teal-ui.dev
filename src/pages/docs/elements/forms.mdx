@@ -5,17 +5,17 @@ description: "A beautifully desgined and consistant reset of HTML forms and inpu
 
 import { ExampleCard } from "../../../components/examplecard";
 
-### forms
+### Forms
 
 ```html
 <form>
-  <label>firstname</label>
-  <input type="text" name="firstname" placeholder="John" />
-  <label>surname</label>
+  <label>Firstname</label>
+  <input required type="text" name="firstname" placeholder="John" />
+  <label>Surname</label>
   <input type="text" name="surname" placeholder="Doe" />
-  <label>email</label>
+  <label>Email</label>
   <input type="email" name="email" placeholder="example@email.com" />
-  <label>select</label>
+  <label>Select</label>
   <select>
     <option disabled selected value="">Pick an Option:</option>
     <option value="One">Option One</option>
@@ -27,14 +27,14 @@ import { ExampleCard } from "../../../components/examplecard";
 
 <ExampleCard>
   <form>
-    <label>firstname</label>
-    <input type="text" name="firstname" placeholder="John" />
-    <label>surname</label>
+    <label>Firstname</label>
+    <input required type="text" name="firstname" placeholder="John" />
+    <label>Surname</label>
     <input type="text" name="surname" placeholder="Doe" />
-    <label>email</label>
+    <label>Email</label>
     <input type="email" name="email" placeholder="example@email.com" />
-    <label>email</label>
-    <select>
+    <label>Select</label>
+    <select required>
       <option disabled selected value="">
         Pick an Option:
       </option>
@@ -42,5 +42,225 @@ import { ExampleCard } from "../../../components/examplecard";
       <option value="Two">Option Two</option>
     </select>
     <input type="submit" />
+  </form>
+</ExampleCard>
+
+---
+
+<ExampleCard>
+  <form className="graph">
+    <label >Padding Example</label>
+    <input type="text" name="firstname" placeholder="John" />
+  </form>
+</ExampleCard>
+
+
+---
+
+##### labels
+
+```html
+  <form>
+    <label>Label</label>
+    <input type="text" name="firstname" placeholder="John" />
+  </form>
+```
+
+
+
+<ExampleCard>
+  <form>
+    <label>Label</label>
+    <input type="text" name="firstname" placeholder="John" />
+  </form>
+</ExampleCard>
+
+---
+
+##### Input fields
+
+```html
+<form>
+    <label>Text</label>
+    <input type="text" name="firstname" placeholder="John" />
+    <label>Email</label>
+    <input type="email" name="email" placeholder="example@email.com" />
+    <label>Search</label>
+    <input type="search" name="search" placeholder="Search" />
+    <label>Number</label>
+    <input type="number" name="number" />
+    <label>Password</label>
+    <input type="password" name="password" />
+    <label>Tel</label>
+    <input type="tel" name="tel" />
+  </form>
+```
+
+<ExampleCard>
+  <form>
+    <label>Text</label>
+    <input type="text" name="firstname" placeholder="John" />
+    <label>Email</label>
+    <input type="email" name="email" placeholder="example@email.com" />
+    <label>Search</label>
+    <input type="search" name="search" placeholder="Search" />
+    <label>Number</label>
+    <input type="number" name="number" />
+    <label>Password</label>
+    <input type="password" name="password" />
+    <label>Tel</label>
+    <input type="tel" name="tel" />
+  </form>
+</ExampleCard>
+
+---
+
+##### Date/Time fields
+
+```html
+ <form>
+    <label>Date</label>
+    <input type="date" name="date" />
+    <label>Datetime Local</label>
+    <input type="datetime-local" name="date-local" />
+    <label>Month</label>
+    <input type="month" name="month" />
+    <label>Week</label>
+    <input type="week" name="week" />
+    <label>Time</label>
+    <input type="time" name="time" />
+  </form>
+```
+
+<ExampleCard>
+  <form>
+    <label>Date</label>
+    <input type="date" name="date" />
+    <label>Datetime Local</label>
+    <input type="datetime-local" name="date-local" />
+    <label>Month</label>
+    <input type="month" name="month" />
+    <label>Week</label>
+    <input type="week" name="week" />
+    <label>Time</label>
+    <input type="time" name="time" />
+  </form>
+</ExampleCard>
+
+---
+
+##### Button fields
+
+```html
+  <form>
+    <input type="button" name="button" value="Button" />
+    <input type="reset" name="reset" />
+    <input type="submit" name="submit" />
+  </form>
+```
+
+<ExampleCard>
+  <form>
+    <input type="button" name="button" value="Button" />
+    <input type="reset" name="reset" />
+    <input type="submit" name="submit" />
+  </form>
+</ExampleCard>
+
+---
+
+##### Boolean fields
+
+```html
+  <form>
+    <label>Checkboxes</label>
+    <input type="checkbox" name="checkbox" />
+    <input type="checkbox" name="checkbox" />
+    <label>Radio</label>
+    <input type="radio" name="radio" />
+    <input type="radio" name="radio" />
+  </form>
+```
+
+<ExampleCard>
+ <form>
+    <label>Checkboxes</label>
+    <input type="checkbox" name="checkbox" />
+    <input type="checkbox" name="checkbox" />
+    <label>Radio</label>
+    <input type="radio" name="radio" />
+    <input type="radio" name="radio" />
+  </form>
+</ExampleCard>
+
+---
+
+##### Misc fields
+
+```html
+  <form>
+    <label>Range</label>
+    <input type="range" name="range" />
+    <label>Color</label>
+    <input type="color" name="checkbox" />
+    <label>File</label>
+    <input type="file" name="file" />
+    <label>Tel</label>
+    <input type="tel" name="tel" />
+    <label>Url</label>
+    <input type="url" name="url" />
+  </form>
+```
+
+<ExampleCard>
+    <form>
+    <label>Range</label>
+    <input type="range" name="range" />
+    <label>Color</label>
+    <input type="color" name="checkbox" />
+    <label>File</label>
+    <input type="file" name="file" />
+    <label>Tel</label>
+    <input type="tel" name="tel" />
+    <label>Url</label>
+    <input type="url" name="url" />
+  </form>
+</ExampleCard>
+
+
+##### Fieldset
+
+```html
+  <form>
+    <fieldset>
+      <legend>Fieldset</legend>
+      <label>Label</label>
+      <input type="text" name="firstname" placeholder="John" />
+    </fieldset>
+  </form>
+```
+
+<ExampleCard>
+      <form>
+    <fieldset>
+      <legend>Fieldset</legend>
+      <label>Label</label>
+      <input type="text" name="firstname" placeholder="John" />
+    </fieldset>
+  </form>
+</ExampleCard>
+
+
+##### TextAreas
+
+```html
+  <form>
+    <textarea placeholder="text area body..."></textarea>
+  </form>
+```
+
+<ExampleCard>
+  <form>
+    <textarea placeholder="text area body..."></textarea>
   </form>
 </ExampleCard>

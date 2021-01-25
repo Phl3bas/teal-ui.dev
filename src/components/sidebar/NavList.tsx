@@ -9,7 +9,7 @@ const NavListItem = ({ title, path }: NavListItemProps) => {
   return (
     <li>
       <Link
-        className="text-decoration-none text-cool-grey-600 text-cool-grey-600:visited text-cool-grey-400:hover"
+        className="text-decoration-none text-h5 flex-col w-full @lg:text-body text-cool-grey-600 text-cool-grey-600:visited text-cool-grey-400:hover"
         to={path}
       >
         {title}

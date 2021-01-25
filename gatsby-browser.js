@@ -1,7 +1,7 @@
 import "@teal-ui/tokens";
 import "@teal-ui/elements";
 import "@teal-ui/css";
-// import "./src/styles/utilities.css";
+import { Store } from "./src/store";
 import "./src/styles/index.css";
 
 import * as React from "react";
@@ -41,5 +41,9 @@ const component = {
   },
 };
 export const wrapRootElement = ({ element }) => {
-  return <MDXProvider components={component}>{element}</MDXProvider>;
+  return (
+    <Store>
+      <MDXProvider components={component}>{element}</MDXProvider>
+    </Store>
+  );
 };

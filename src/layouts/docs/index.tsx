@@ -15,16 +15,13 @@ export default ({ pageContext, children }: Props) => {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto flex-row gap-4 relative pt-15">
+      <main className="container mx-auto flex-row gap-4 relative @lg:pt-8">
         <Sidebar>
           <DocNav />
         </Sidebar>
-        <div>
-          <div
-            className="bg-white-000 p-13 br-md shadow-xs mb-19 min-h-screen"
-            style={{ minWidth: "58em" }}
-          >
-            <div className="mx-auto " style={{ width: "50em" }}>
+        <div className="w-full @lg:w-11/12">
+          <div className="bg-white-000 p-13 br-md @lg:shadow-xs mb-19 min-h-screen">
+            <div className="mx-auto">
               {frontmatter && (
                 <PageHeader
                   title={frontmatter.title}

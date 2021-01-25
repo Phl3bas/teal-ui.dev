@@ -6,30 +6,20 @@ description: "A simple reset of unordered, ordered and data lists, bringing cons
 import { ExampleCard } from "../../../components/examplecard";
 
 ```html
-<ul>
-  <li>Unordered List Item</li>
-  <li>Unordered List Item</li>
-  <li>Unordered List Item</li>
-  <li>Unordered List Item</li>
-  <li>Unordered List Item</li>
-</ul>
-
-<ol>
-  <li>Ordered List Item</li>
-  <li>Ordered List Item</li>
-  <li>Ordered List Item</li>
-  <li>Ordered List Item</li>
-  <li>Ordered List Item</li>
-</ol>
-
-<dl>
-  <dt>Data List Title</dt>
-  <li>Data List Item</li>
-  <dt>Data List Title</dt>
-  <li>Data List Item</li>
-  <dt>Data List Title</dt>
-  <li>Data List Item</li>
-</dl>
+  <ul>
+    <li>Unordered List Item</li>
+    <li>Unordered List Item</li>
+    <li>Unordered List Item</li>
+    <li>Unordered List Item</li>
+    <li>Unordered List Item</li>
+    <ul>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+    </ul>
+  </ul>
 ```
 
 <ExampleCard>
@@ -39,20 +29,88 @@ import { ExampleCard } from "../../../components/examplecard";
     <li>Unordered List Item</li>
     <li>Unordered List Item</li>
     <li>Unordered List Item</li>
+    <ul>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+      <li>Unordered List Item</li>
+    </ul>
   </ul>
+</ExampleCard>
+
+---
+
+```html
   <ol>
     <li>Ordered List Item</li>
     <li>Ordered List Item</li>
     <li>Ordered List Item</li>
     <li>Ordered List Item</li>
     <li>Ordered List Item</li>
+    <ol>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+    </ol>
   </ol>
+```
+
+<ExampleCard>
+    <ol>
+    <li>Ordered List Item</li>
+    <li>Ordered List Item</li>
+    <li>Ordered List Item</li>
+    <li>Ordered List Item</li>
+    <li>Ordered List Item</li>
+    <ol>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+      <li>Ordered List Item</li>
+    </ol>
+  </ol>
+</ExampleCard>
+
+---
+
+```html
   <dl>
     <dt>Data List Title</dt>
-    <li>Data List Item</li>
+    <dd>Data List Item</dd>
     <dt>Data List Title</dt>
-    <li>Data List Item</li>
+    <dd>Data List Item</dd>
     <dt>Data List Title</dt>
-    <li>Data List Item</li>
+    <dd>Data List Item</dd>
+    <dl>
+      <dt>Data List Title</dt>
+      <dd>Data List Item</dd>
+      <dt>Data List Title</dt>
+      <dd>Data List Item</dd>
+      <dt>Data List Title</dt>
+      <dd>Data List Item</dd>
+    </dl>
+  </dl>
+```
+
+<ExampleCard>
+    <dl>
+    <dt>Data List Title</dt>
+    <dd>Data List Item</dd>
+    <dt>Data List Title</dt>
+    <dd>Data List Item</dd>
+    <dt>Data List Title</dt>
+    <dd>Data List Item</dd>
+    <dl>
+      <dt>Data List Title</dt>
+      <dd>Data List Item</dd>
+      <dt>Data List Title</dt>
+      <dd>Data List Item</dd>
+      <dt>Data List Title</dt>
+      <dd>Data List Item</dd>
+    </dl>
   </dl>
 </ExampleCard>

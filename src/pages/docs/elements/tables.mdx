@@ -84,20 +84,21 @@ import { ExampleCard } from "../../../components/examplecard";
 </ExampleCard>
 
 ```css
-thead {
-  --tl-thead-bordercolor: var(--tl-semantic-danger);
-  --tl-thead-color: var(--tl-semantic-danger);
+table {
+      --tl-thead-bordercolor: var(--tl-semantic-danger);
+      --tl-thead-color: var(--tl-semantic-danger);
+      --tl-tr-partition : var(--tl-semantic-danger;
 }
 ```
 
 <ExampleCard>
-  <table>
-    <thead
-      style={{
-        "--tl-thead-bordercolor": "var(--tl-semantic-attention)",
-        "--tl-thead-color": "var(--tl-semantic-attention)",
-      }}
-    >
+  <table   
+    style={{
+        "--tl-thead-bordercolor": "var(--tl-semantic-danger)",
+        "--tl-thead-color": "var(--tl-semantic-danger)",
+        "--tl-tr-partition" : "var(--tl-semantic-danger",
+      }}>
+    <thead>
       <tr>
         <th>#</th>
         <th>Name</th>
@@ -131,5 +132,123 @@ thead {
         <td>Edward@email.com</td>
       </tr>
     </tbody>
+  </table>
+</ExampleCard>
+
+
+```html
+<table>
+    <tbody>
+      ...
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+        <td>40</td>
+      </tr>
+    </tfoot>
+</table>
+```
+
+<ExampleCard>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SFJ044</td>
+        <td>Sepp</td>
+        <td>33</td>
+        <td>Sepp@email.com</td>
+      </tr>
+      <tr>
+        <td>FSF444</td>
+        <td>Lizzie</td>
+        <td>32</td>
+        <td>Sepp@email.com</td>
+      </tr>
+      <tr>
+        <td>PJF979</td>
+        <td>Henry</td>
+        <td>3</td>
+        <td>Henry@email.com</td>
+      </tr>
+      <tr>
+        <td>IKF932</td>
+        <td>Sepp</td>
+        <td>0</td>
+        <td>Edward@email.com</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+        <td>40</td>
+      </tr>
+    </tfoot>
+  </table>
+</ExampleCard>
+
+```css
+table {
+  --tl-tfoot-bordercolor: var(--tl-semantic-danger);
+  --tl-tfoot-color: var(--tl-semantic-danger);
+}
+```
+
+<ExampleCard>
+  <table style={{"--tl-tfoot-bordercolor" : "var(--tl-orange-400)", "--tl-tfoot-color" :"var(--tl-orange-400)"}}>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SFJ044</td>
+        <td>Sepp</td>
+        <td>33</td>
+        <td>Sepp@email.com</td>
+      </tr>
+      <tr>
+        <td>FSF444</td>
+        <td>Lizzie</td>
+        <td>32</td>
+        <td>Sepp@email.com</td>
+      </tr>
+      <tr>
+        <td>PJF979</td>
+        <td>Henry</td>
+        <td>3</td>
+        <td>Henry@email.com</td>
+      </tr>
+      <tr>
+        <td>IKF932</td>
+        <td>Sepp</td>
+        <td>0</td>
+        <td>Edward@email.com</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+        <td>40</td>
+      </tr>
+    </tfoot>
   </table>
 </ExampleCard>

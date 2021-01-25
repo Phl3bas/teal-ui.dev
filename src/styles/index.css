@@ -7,6 +7,10 @@ h6 {
   color: var(--tl-grey-900);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 pre {
   --radius: var(--tl-radius-lg);
   background: var(--tl-cool-grey-900);
@@ -131,7 +135,7 @@ thead tr th:first-child {
 }
 
 .container {
-  max-width: 80em;
+  max-width: 70em;
 }
 
 .p-4 {
@@ -148,6 +152,12 @@ thead tr th:first-child {
   padding-top: var(--tl-size-0);
   padding-bottom: var(--tl-size-0);
 }
+
+.py-7 {
+  padding-top: var(--tl-size-7);
+  padding-bottom: var(--tl-size-7);
+}
+
 .py-14 {
   padding-top: var(--tl-size-14);
   padding-bottom: var(--tl-size-14);
@@ -170,6 +180,24 @@ thead tr th:first-child {
   padding-right: var(--tl-size-13);
 }
 
+.px-16 {
+  padding-left: var(--tl-size-16);
+  padding-right: var(--tl-size-16);
+}
+
+.px-18 {
+  padding-left: var(--tl-size-18);
+  padding-right: var(--tl-size-18);
+}
+
+.pt-5 {
+  padding-top: var(--tl-size-5);
+}
+
+.pt-8 {
+  padding-top: var(--tl-size-8);
+}
+
 .pt-15 {
   padding-top: var(--tl-size-15);
 }
@@ -180,6 +208,10 @@ thead tr th:first-child {
 
 .mb-2 {
   margin-bottom: var(--tl-size-2);
+}
+
+.ontop {
+  z-index: 10000;
 }
 
 .mb-10 {
@@ -203,4 +235,27 @@ thead tr th:first-child {
     var(--tl-green-200) 100%
   );
   color: var(--tl-white-000);
+}
+
+.graph {
+  border: 2px solid var(--tl-teal-500);
+  border-radius: var(--tl-radius-md);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%232b9083' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.graph > * {
+  outline: 2px solid var(--tl-purple-400);
+}
+
+@media only screen and (min-width: 1080px) {
+  .\@lg\:pt-5 {
+    padding-top: var(--tl-size-5);
+  }
+
+  .\@lg\:pt-8 {
+    padding-top: var(--tl-size-8);
+  }
+  .\@lg\:pt-15 {
+    padding-top: var(--tl-size-15);
+  }
 }
