@@ -75,7 +75,10 @@ export const DocNav = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <div
+      className="px-12 @lg:px-0"
+      style={{ paddingBottom: "var(--tl-size-20)" }}
+    >
       {Object.keys(navigation).map((key, i) => (
         <div key={i}>
           <h5 className="text-black-300 mb-2">{key}</h5>

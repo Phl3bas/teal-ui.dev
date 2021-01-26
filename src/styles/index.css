@@ -19,6 +19,7 @@ pre {
   border-radius: var(--radius) var(--radius) 0 0;
   margin-bottom: 0;
   margin-top: var(--tl-size-13);
+  overflow-x: scroll;
 }
 
 p code,
@@ -134,10 +135,6 @@ thead tr th:first-child {
   margin-right: auto;
 }
 
-.container {
-  max-width: 70em;
-}
-
 .p-4 {
   padding: var(--tl-size-4);
 }
@@ -161,6 +158,10 @@ thead tr th:first-child {
 .py-14 {
   padding-top: var(--tl-size-14);
   padding-bottom: var(--tl-size-14);
+}
+.px-2 {
+  padding-left: var(--tl-size-2);
+  padding-right: var(--tl-size-2);
 }
 .px-7 {
   padding-left: var(--tl-size-7);
@@ -203,7 +204,7 @@ thead tr th:first-child {
 }
 
 .simplebar-scrollbar::before {
-  background-color: red;
+  background-color: var(--tl-teal-200);
 }
 
 .mb-2 {
@@ -231,7 +232,7 @@ thead tr th:first-child {
 .primary-gradient {
   background-image: linear-gradient(
     to right,
-    var(--tl-teal-400) 0%,
+    var(--tl-teal-400) 20%,
     var(--tl-green-200) 100%
   );
   color: var(--tl-white-000);
@@ -247,7 +248,27 @@ thead tr th:first-child {
   outline: 2px solid var(--tl-purple-400);
 }
 
-@media only screen and (min-width: 1080px) {
+.container {
+  max-with: 100%;
+}
+
+.hide-l {
+  margin-left: -100%;
+}
+
+.transition {
+  transition: margin-left 300ms var(--ease, ease);
+}
+
+@media only screen and (min-width: 1280px) {
+  .\@lg\:container {
+    max-width: 70em;
+  }
+
+  .\@lg\:px-0 {
+    padding-inline: var(--tl-size-0);
+  }
+
   .\@lg\:pt-5 {
     padding-top: var(--tl-size-5);
   }
@@ -255,7 +276,15 @@ thead tr th:first-child {
   .\@lg\:pt-8 {
     padding-top: var(--tl-size-8);
   }
+
+  .\@lg\:pt-10 {
+    padding-top: var(--tl-size-10);
+  }
   .\@lg\:pt-15 {
     padding-top: var(--tl-size-15);
+  }
+
+  .\@lg\:show {
+    margin-left: 0;
   }
 }

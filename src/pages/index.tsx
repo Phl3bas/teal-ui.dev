@@ -5,7 +5,7 @@ import Logo from "../assets/svg/logo.svg";
 function IndexPage() {
   return (
     <div className="h-screen m-auto flex-col justifycontent-center alignitems-center container">
-      <Logo width="700" />
+      <Logo className="w-24 @lg:w-25" />
       <p className="text-grey-600 text-h4">
         A Beautifully Modular Design System
       </p>

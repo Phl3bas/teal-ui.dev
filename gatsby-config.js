@@ -7,13 +7,11 @@ module.exports = {
 
   plugins: [
     "gatsby-plugin-typescript",
+    "gatsby-plugin-mdx",
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: `gatsby-plugin-layout`,
       options: {
-        extentions: [".md", ".mdx"],
-        defaultLayouts: {
-          default: require.resolve("./src/layouts/docs/index.tsx"),
-        },
+        component: require.resolve(`./src/layouts/docs/index.tsx`),
       },
     },
     {

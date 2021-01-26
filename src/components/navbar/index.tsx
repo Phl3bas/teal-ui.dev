@@ -17,9 +17,10 @@ export const Navbar = () => {
         zIndex: 10000,
       }}
     >
-      <div className="flex-row justifycontent-between @lg:alignitems-center w-full container mx-auto">
+      <div className="flex-row justifycontent-between @lg:alignitems-center w-full @lg:container mx-auto">
         <div
-          className="@lg:none alignself-center w-14 pointer"
+          tabIndex={0}
+          className="flex-row @lg:none alignself-center p-5 pointer"
           onPointerDown={() => {
             dispatch({
               type: state.navState.isOpen
@@ -33,16 +34,17 @@ export const Navbar = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="var(--tl-cool-grey-900)"
+            width="40"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M4 6h16M4 12h8m-8 6h16"
             />
           </svg>
         </div>
-        <div className="flex-row text-cool-grey-300">
+        <div className="flex-row alignitems-center text-cool-grey-300">
           <Link to="/">
             <TealLogo width="200" />
           </Link>

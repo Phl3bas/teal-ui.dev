@@ -1,16 +1,21 @@
 import { Link } from "gatsby";
 import * as React from "react";
+import { AppContext } from "../../store";
+import { NavActionTypes } from "../../actions";
 
 interface NavListItemProps {
   title: string;
   path: string;
 }
 const NavListItem = ({ title, path }: NavListItemProps) => {
+  const { dispatch } = React.useContext(AppContext);
+
   return (
     <li>
       <Link
         className="text-decoration-none text-h5 flex-col w-full @lg:text-body text-cool-grey-600 text-cool-grey-600:visited text-cool-grey-400:hover"
         to={path}
+        onClick={() => dispatch({ type: NavActionTypes.Close })}
       >
         {title}
       </Link>

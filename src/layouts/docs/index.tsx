@@ -11,28 +11,33 @@ interface Props {
 
 export default ({ pageContext, children }: Props) => {
   const frontmatter = pageContext?.frontmatter;
+  const isDocs = pageContext?.layout === "docs";
 
-  return (
-    <>
-      <Navbar />
-      <main className="container mx-auto flex-row gap-4 relative @lg:pt-8">
-        <Sidebar>
-          <DocNav />
-        </Sidebar>
-        <div className="w-full @lg:w-11/12">
-          <div className="bg-white-000 p-13 br-md @lg:shadow-xs mb-19 min-h-screen">
-            <div className="mx-auto">
-              {frontmatter && (
-                <PageHeader
-                  title={frontmatter.title}
-                  description={frontmatter.description}
-                />
-              )}
-              {children}
+  if (isDocs) {
+    return (
+      <>
+        <Navbar />
+        <main className="@lg:container mx-auto flex-row gap-8 relative @lg:pt-10">
+          <Sidebar>
+            <DocNav />
+          </Sidebar>
+          <div className="w-full @lg:w-11/12">
+            <div className="bg-white-000 p-13 br-md @lg:shadow-xs mb-19 min-h-screen">
+              <div className="mx-auto">
+                {frontmatter && (
+                  <PageHeader
+                    title={frontmatter.title}
+                    description={frontmatter.description}
+                  />
+                )}
+                {children}
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </>
-  );
+        </main>
+      </>
+    );
+  } else {
+    return <>{children}</>;
+  }
 };

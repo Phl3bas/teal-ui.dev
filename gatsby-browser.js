@@ -1,8 +1,8 @@
 import "@teal-ui/tokens";
 import "@teal-ui/elements";
 import "@teal-ui/css";
-import { Store } from "./src/store";
 import "./src/styles/index.css";
+import { Store } from "./src/store";
 
 import * as React from "react";
 import { MDXProvider } from "@mdx-js/react";
