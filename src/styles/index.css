@@ -231,7 +231,7 @@ thead tr th:first-child {
 
 .primary-gradient {
   background-image: linear-gradient(
-    to right,
+    45deg,
     var(--tl-teal-400) 20%,
     var(--tl-green-200) 100%
   );

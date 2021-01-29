@@ -3,7 +3,7 @@ import React from "react";
 import { AppContext } from "../../store";
 import { NavActionTypes } from "../../actions";
 import Github from "../../assets/svg/github.svg";
-import TealLogo from "../../assets/svg/logo.svg";
+import TealeafLogo from "../../assets/svg/tealeaf-primary.svg";
 
 export const Navbar = () => {
   const { state, dispatch } = React.useContext(AppContext);
@@ -44,11 +44,11 @@ export const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="flex-row alignitems-center text-cool-grey-300">
+        <div className="flex-row sticky justifycontent-center alignitems-center text-cool-grey-300">
           <Link to="/">
-            <TealLogo width="200" />
+            <TealeafLogo width="200" />
           </Link>
-          <p>docs</p>
+          <p className="flex-row m-0">docs</p>
         </div>
 
         <div className="flex-row alignitems-center justifycontent-between @lg:w-20">

@@ -7,7 +7,7 @@ import { ExampleCard } from "../../../components/examplecard";
 
 ##### Basic Button
 
-TealUI believes that button stylings are the heart and soul of a design system, and quite frankly the plain html button shipped in browsers, doesn't quite cut it.
+Tealeaf believes that button stylings are the heart and soul of a design system, and quite frankly the plain html button shipped in browsers, doesn't quite cut it.
 
 **Elements** provides you with a full redesign of the html button element. Our design is based upon many "modern" button styles shipped with most websites today.
 
@@ -74,13 +74,13 @@ This means that styling a button takes less css on your part, as **Elements** do
 .square-button {
   background-color: var(--tl-brand-accent);
   color: var(--tl-white-000);
-  border-adius: var(--tl-radius-none);
+  border-radius: var(--tl-radius-none);
 }
 
 .outline-button {
   background-color: var(--tl-white-000);
-  color: var(--tl-teal-600);
-  border: 1px solid var(--tl-teal-500);
+  color: var(--tl-brand-secondary);
+  border: 1px solid var(--tl-brand-secondary);
 }
 ```
 
@@ -114,8 +114,8 @@ This means that styling a button takes less css on your part, as **Elements** do
   <button
     style={{
       backgroundColor: "var(--tl-white-000)",
-      color: "var(--tl-teal-600)",
-      border: "1px solid var(--tl-teal-500)",
+      color: "var(--tl-brand-secondary)",
+      border: "1px solid var(--tl-brand-secondary)",
       fontWeight: 500,
     }}
   >
@@ -128,15 +128,15 @@ This means that styling a button takes less css on your part, as **Elements** do
 When styling to your buttons, **Elements** provides a default disabled state out of the box while still maintaining your button theming by applying subtle filters.
 
 ```html
-<button class="primary">Colored Button</button>
-<button class="red pill">Pill Button</button>
-<button class="purple square">Squared Button</button>
-<button class="primary outline">Outline Button</button>
+<button class="colored-button">Colored Button</button>
+<button class="pill-button">Pill Button</button>
+<button class="square-button">Squared Button</button>
+<button class="outline-button">Outline Button</button>
 
-<button class="primary" disabled>Colored Button</button>
-<button class="red pill" disabled>Pill Button</button>
-<button class="purple square" disabled>Squared Button</button>
-<button class="primary outline" disabled>Outline Button</button>
+<button class="colored-button" disabled>Colored Button</button>
+<button class="pill-button" disabled>Pill Button</button>
+<button class="square-button" disabled>Squared Button</button>
+<button class="outline-button" disabled>Outline Button</button>
 ```
 
 <ExampleCard>
@@ -169,8 +169,8 @@ When styling to your buttons, **Elements** provides a default disabled state out
   <button
     style={{
       backgroundColor: "var(--tl-white-000)",
-      color: "var(--tl-teal-600)",
-      border: "1px solid var(--tl-teal-500)",
+      color: "var(--tl-brand-secondary)",
+      border: "1px solid var(--tl-brand-secondary)",
       fontWeight: 500,
     }}
   >
@@ -209,8 +209,8 @@ When styling to your buttons, **Elements** provides a default disabled state out
     disabled
     style={{
       backgroundColor: "var(--tl-white-000)",
-      color: "var(--tl-teal-600)",
-      border: "1px solid var(--tl-teal-500)",
+      color: "var(--tl-brand-secondary)",
+      border: "1px solid var(--tl-brand-secondary)",
       fontWeight: 500,
     }}
   >

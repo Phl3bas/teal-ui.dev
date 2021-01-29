@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: "teal-ui.dev",
+    title: "tealeaf.design",
   },
 
   plugins: [

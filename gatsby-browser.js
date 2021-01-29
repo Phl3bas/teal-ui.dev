@@ -1,6 +1,6 @@
-import "@teal-ui/tokens";
-import "@teal-ui/elements";
-import "@teal-ui/css";
+import "@tealeaf/tokens";
+import "@tealeaf/elements";
+import "@tealeaf/css";
 import "./src/styles/index.css";
 import { Store } from "./src/store";
 

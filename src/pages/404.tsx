@@ -4,12 +4,12 @@ import FourZeroFour from "../assets/svg/fourzerofour.svg";
 
 const NotFoundPage = () => {
   return (
-    <main className="h-100vh container mx-auto flex-col justifycontent-center alignitems-center">
+    <main className="h-screen container mx-auto flex-col justifycontent-center alignitems-center">
       <FourZeroFour width="700" />
-      <p className="text-grey-700 text-h6">
-        Sorry, the page you tried to navigate to doesnt exist
+      <p className="text-grey-700 text-h6 m-7 mb-13">
+        Sorry, the page you tried to navigate to doesn't exist
       </p>
-      <Link role="button" className="bg-primary text-white-000" to="/">
+      <Link role="button" className="bg-semantic-primary text-white-000" to="/">
         Go home
       </Link>
     </main>

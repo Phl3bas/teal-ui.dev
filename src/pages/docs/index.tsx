@@ -6,7 +6,7 @@ const DocsPage = () => {
   return (
     <Layout>
       <PageHeader
-        title={"Getting Started with TealUI"}
+        title={"Getting Started with Tealeaf"}
         description={"A Beautifully Modular Design System"}
       />
       <div></div>
