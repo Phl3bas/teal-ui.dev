@@ -37,8 +37,8 @@ export const Elevation = ({
           marginBlockEnd: "var(--tl-size-15)",
         }}
       >
-        {[...new Array(count).keys()].map((i) => (
-          <Box shadow={i} inset={inset} />
+        {[...new Array(count).keys()].map((i, id) => (
+          <Box key={id} shadow={i} inset={inset} />
         ))}
       </div>
     </ExampleCard>
