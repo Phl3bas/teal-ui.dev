@@ -32,7 +32,7 @@ export const Elevation = ({
   return (
     <ExampleCard>
       <div
-        className="grid gap-15 gridtemp-cols-2 p-15 shadow-1 br-md"
+        className="grid gap-15 gridtemp-cols-2 p-15"
         style={{
           marginBlockEnd: "var(--tl-size-15)",
         }}

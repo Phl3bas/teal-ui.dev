@@ -9,7 +9,7 @@ function IndexPage() {
       <p className="text-grey-600 text-h4 m-7 mb-13">
         A Beautifully Modular Design System
       </p>
-      <div className="f-row">
+      <div className="flex-row">
         <a
           role="button"
           className="bg-brand-primary-alt text-white-000 text-white-000:visited"

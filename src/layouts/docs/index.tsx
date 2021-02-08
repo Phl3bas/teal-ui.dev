@@ -22,7 +22,7 @@ export default ({ pageContext, children }: Props) => {
             <DocNav />
           </Sidebar>
           <div className="w-full @lg:w-11/12">
-            <div className="bg-white-000 p-13 br-md @lg:shadow-xs mb-19 min-h-screen">
+            <div className="bg-white-000 p-13 radius-md @lg:shadow-xs mb-19 min-h-screen">
               <div className="mx-auto">
                 {frontmatter && (
                   <PageHeader

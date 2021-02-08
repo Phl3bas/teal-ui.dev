@@ -30,7 +30,7 @@ export const Scale = () => {
                 </td>
                 <td className="none @lg:flex-row p-4 justifycontent-start alignitems-center">
                   <div
-                    className="none @lg:flex-row primary-gradient h-13 br-sm"
+                    className="none @lg:flex-row primary-gradient h-13 radius-sm"
                     style={{
                       width: `var(--tl-size-${token})`,
                     }}

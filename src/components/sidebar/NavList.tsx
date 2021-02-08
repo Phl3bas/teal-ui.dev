@@ -13,7 +13,7 @@ const NavListItem = ({ title, path }: NavListItemProps) => {
   return (
     <li>
       <Link
-        className="text-decoration-none text-h5 flex-col @lg:w-10/12 @lg:text-body text-cool-grey-600 text-cool-grey-600:visited text-cool-grey-400:hover bg-teal-100:hover br-md px-7"
+        className="text-decoration-none text-h5 flex-col @lg:w-10/12 @lg:text-body text-cool-grey-600 text-cool-grey-600:visited text-cool-grey-400:hover bg-teal-100:hover radius-md px-7"
         to={path}
         onClick={() => dispatch({ type: NavActionTypes.Close })}
       >
