@@ -79,8 +79,8 @@ This means that styling a button takes less css on your part, as **Elements** do
 
 .outline-button {
   background-color: var(--tl-white-000);
-  color: var(--tl-brand-secondary);
-  border: 1px solid var(--tl-brand-secondary);
+  color: var(--tl-brand-secondary-alt);
+  border: 1px solid var(--tl-brand-secondary-alt);
 }
 ```
 
@@ -114,8 +114,8 @@ This means that styling a button takes less css on your part, as **Elements** do
   <button
     style={{
       backgroundColor: "var(--tl-white-000)",
-      color: "var(--tl-brand-secondary)",
-      border: "1px solid var(--tl-brand-secondary)",
+      color: "var(--tl-brand-secondary-alt)",
+      border: "1px solid var(--tl-brand-secondary-alt)",
       fontWeight: 500,
     }}
   >
@@ -140,82 +140,86 @@ When styling to your buttons, **Elements** provides a default disabled state out
 ```
 
 <ExampleCard>
-  <button
-    style={{
-      backgroundColor: "var(--tl-teal-500)",
-      color: "var(--tl-white-000)",
-    }}
-  >
-    Colored Button
-  </button>
-  <button
-    style={{
-      backgroundColor: "var(--tl-semantic-danger)",
-      color: "var(--tl-white-000)",
-      borderRadius: "var(--tl-radius-round)",
-    }}
-  >
-    Pill Button
-  </button>
-  <button
-    style={{
-      backgroundColor: "var(--tl-brand-accent)",
-      color: "var(--tl-white-000)",
-      borderRadius: "var(--tl-radius-none)",
-    }}
-  >
-    Square Button
-  </button>
-  <button
-    style={{
-      backgroundColor: "var(--tl-white-000)",
-      color: "var(--tl-brand-secondary)",
-      border: "1px solid var(--tl-brand-secondary)",
-      fontWeight: 500,
-    }}
-  >
-    Outline Button
-  </button>
-  <button
-    disabled
-    style={{
-      backgroundColor: "var(--tl-teal-500)",
-      color: "var(--tl-white-000)",
-    }}
-  >
-    Colored Button
-  </button>
-  <button
-    disabled
-    style={{
-      backgroundColor: "var(--tl-semantic-danger)",
-      color: "var(--tl-white-000)",
-      borderRadius: "var(--tl-radius-round)",
-    }}
-  >
-    Pill Button
-  </button>
-  <button
-    disabled
-    style={{
-      backgroundColor: "var(--tl-brand-accent)",
-      color: "var(--tl-white-000)",
-      borderRadius: "var(--tl-radius-none)",
-    }}
-  >
-    Square Button
-  </button>
-  <button
-    disabled
-    style={{
-      backgroundColor: "var(--tl-white-000)",
-      color: "var(--tl-brand-secondary)",
-      border: "1px solid var(--tl-brand-secondary)",
-      fontWeight: 500,
-    }}
-  >
-    Outline Button
-  </button>
+  <div>
+    <button
+      style={{
+        backgroundColor: "var(--tl-teal-500)",
+        color: "var(--tl-white-000)",
+      }}
+    >
+      Colored Button
+    </button>
+    <button
+      style={{
+        backgroundColor: "var(--tl-semantic-danger)",
+        color: "var(--tl-white-000)",
+        borderRadius: "var(--tl-radius-round)",
+      }}
+    >
+      Pill Button
+    </button>
+    <button
+      style={{
+        backgroundColor: "var(--tl-brand-accent)",
+        color: "var(--tl-white-000)",
+        borderRadius: "var(--tl-radius-none)",
+      }}
+    >
+      Square Button
+    </button>
+    <button
+      style={{
+        backgroundColor: "var(--tl-white-000)",
+        color: "var(--tl-brand-secondary-alt)",
+        border: "1px solid var(--tl-brand-secondary-alt)",
+        fontWeight: 500,
+      }}
+    >
+      Outline Button
+    </button>
+  </div>
+  <div>
+    <button
+      disabled
+      style={{
+        backgroundColor: "var(--tl-teal-500)",
+        color: "var(--tl-white-000)",
+      }}
+    >
+      Colored Button
+    </button>
+    <button
+      disabled
+      style={{
+        backgroundColor: "var(--tl-semantic-danger)",
+        color: "var(--tl-white-000)",
+        borderRadius: "var(--tl-radius-round)",
+      }}
+    >
+      Pill Button
+    </button>
+    <button
+      disabled
+      style={{
+        backgroundColor: "var(--tl-brand-accent)",
+        color: "var(--tl-white-000)",
+        borderRadius: "var(--tl-radius-none)",
+      }}
+    >
+      Square Button
+    </button>
+    <button
+      disabled
+      style={{
+        backgroundColor: "var(--tl-white-000)",
+        color: "var(--tl-brand-secondary-alt)",
+        border: "1px solid var(--tl-brand-secondary-alt)",
+        fontWeight: 500,
+      }}
+    >
+      Outline Button
+    </button>
+  </div>
 </ExampleCard>
 
 Need a button to be the full width of its container? nothing special is needed Just set its width to 100%!

@@ -16,7 +16,7 @@ const RadiusBox = ({ value }: { value: string }) => {
     <div
       className={`flex-col primary-gradient text-white-000 text-body justifycontent-center alignitems-center h-19 w-19 ${value}`}
     >
-      --tl-radius-{value}
+      --tl-{value}
     </div>
   );
 };

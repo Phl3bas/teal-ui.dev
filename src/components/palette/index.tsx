@@ -37,14 +37,14 @@ export const Palette = ({ colors, shouldSort = false }: Props) => {
     <div className="flex-column">
       {Object.keys(colors).map((hue) => (
         <div
-          className="flex-row gap-10 mb-10 justifycontent-between alignitems-center flex-wrap"
+          className="flex-row mb-10 gap-11 justifycontent-between alignitems-center flex-wrap"
           key={hue}
         >
           <div className="flex-column min-w-17 justifycontent-around alignitems-end">
             <h6 className="m-0">{capitalize(hue)}</h6>
             <code className="text-cool-grey-600 m-0 text-sm">--tl-{hue}</code>
           </div>
-          <div className="flex-row mx-10 justifycontent-even flex-1 flex-wrap">
+          <div className="flex-row mx-6 justifycontent-even flex-1 flex-wrap">
             {Object.keys(colors[hue])
               .sort(
                 (a, b) =>

@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  max-width: 100%;
+}
+
 pre {
   --radius: var(--tl-radius-lg);
   background: var(--tl-cool-grey-900);
@@ -44,7 +48,7 @@ thead tr th:first-child {
 .play {
   perspective: 1000px;
   animation-name: slide;
-  animation-duration: 2s;
+  animation-duration: var(--duration);
 
   animation-fill-mode: both;
   animation-iteration-count: 1;
@@ -139,10 +143,22 @@ thead tr th:first-child {
 }
 
 .primary-gradient {
+  background-color: none;
   background-image: linear-gradient(
     45deg,
     var(--tl-teal-400) 20%,
     var(--tl-green-200) 100%
+  );
+  color: var(--tl-white-000);
+}
+
+.primary-gradient:hover {
+  --tl-button-hover: none;
+  background-color: none;
+  background-image: linear-gradient(
+    45deg,
+    var(--tl-teal-400) 20%,
+    var(--tl-green-200) 80%
   );
   color: var(--tl-white-000);
 }
@@ -158,7 +174,7 @@ thead tr th:first-child {
 }
 
 .container {
-  max-with: 100%;
+  max-width: 100%;
 }
 
 .hide-l {
@@ -171,7 +187,7 @@ thead tr th:first-child {
 
 @media only screen and (min-width: 1280px) {
   .\@lg\:container {
-    max-width: 70em;
+    max-width: 80em;
   }
 
   .\@lg\:show {

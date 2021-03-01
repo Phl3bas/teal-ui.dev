@@ -75,15 +75,18 @@ export const DocNav = (): JSX.Element => {
   };
 
   return (
-    <div
-      className="px-12 @lg:px-0"
-      style={{ paddingBottom: "var(--tl-size-20)" }}
-    >
+    <div className="px-0 @lg:px-2 mr-10">
       {Object.keys(navigation).map((key, i) => (
-        <div key={i}>
-          <h5 className="text-black-300 mb-2">{key}</h5>
+        <details
+          open={key === "Getting Started" && true}
+          className="shadow-none mb-5 overflow-x-hidden "
+          key={i}
+        >
+          <summary className="shadow-none text-black-300 text-h5 @lg:text-body">
+            {key}
+          </summary>
           <NavList list={navigation[key]} />
-        </div>
+        </details>
       ))}
     </div>
   );
