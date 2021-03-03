@@ -3,11 +3,11 @@ import { Size } from "./scale";
 
 export const Scale = () => {
   return (
-    <div className="mx-auto w-6/12 @lg:w-full">
+    <div className="mx-auto w-6/12 @lg:w-full @lg:max-w-30 overflow-x-scroll">
       <table>
         <thead>
           <tr>
-            <th className="min-w-20">Token</th>
+            <th className="min-w-21">Token</th>
             <th className="min-w-16">Size</th>
             <th className="none"></th>
           </tr>

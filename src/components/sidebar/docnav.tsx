@@ -75,14 +75,14 @@ export const DocNav = (): JSX.Element => {
   };
 
   return (
-    <div className="px-0 @lg:px-2 mr-10">
+    <div className="w-full">
       {Object.keys(navigation).map((key, i) => (
         <details
           open={key === "Getting Started" && true}
-          className="shadow-none mb-5 overflow-x-hidden border-none:focus border-none:active"
+          className="mb-8 border-none:focus border-none:active"
           key={i}
         >
-          <summary className="shadow-none text-black-300 text-h5 @lg:text-body">
+          <summary className="text-black-300 text-h5 @lg:text-body">
             {key}
           </summary>
           <NavList list={navigation[key]} />

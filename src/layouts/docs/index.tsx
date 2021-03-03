@@ -17,12 +17,12 @@ export default ({ pageContext, children }: Props) => {
     return (
       <>
         <Navbar />
-        <main className="@lg:container mx-auto flex-row gap-13 relative @lg:pt-14">
+        <main className="@lg:container mx-auto flex-row relative @lg:pt-14 gap-15">
           <Sidebar>
             <DocNav />
           </Sidebar>
-          <article className="w-full @lg:w-11/12">
-            <div className="p-16 radius-md @lg:shadow-xs mb-19 min-h-screen">
+          <article className="w-full @lg:w-9/12 ">
+            <div className="p-16 radius-md @lg:shadow-xs mb-19 min-h-screen bg-white-000">
               {frontmatter && (
                 <PageHeader
                   title={frontmatter.title}

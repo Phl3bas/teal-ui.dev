@@ -9,6 +9,11 @@ h6 {
 
 body {
   overflow-x: hidden;
+  background: linear-gradient(
+    110deg,
+    var(--tl-white-000) 50%,
+    var(--tl-teal-100) 100%
+  );
 }
 
 p {
@@ -43,6 +48,28 @@ td code {
 
 thead tr th:first-child {
   width: 10rem;
+}
+
+summary {
+  transition: background 300ms ease, border-radius 300ms ease;
+}
+
+details {
+  &[open] {
+    border-radius: var(--tl-radius-md) var(--tl-radius-md) 0 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    & > summary {
+      background: var(--tl-teal-100);
+      border-radius: var(--tl-radius-md) var(--tl-radius-md) 0 0;
+    }
+  }
+
+  &:not([open]) {
+    & > summary:hover {
+      background: var(--tl-teal-100);
+    }
+  }
 }
 
 .play {

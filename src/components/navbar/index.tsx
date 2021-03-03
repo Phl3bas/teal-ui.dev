@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import { AppContext } from "../../store";
-import { NavActionTypes } from "../../actions";
+import { NavActionTypes, ToggleNav } from "../../actions";
 import Github from "../../assets/svg/github.svg";
 import TealeafLogo from "../../assets/svg/tealeaf-primary.svg";
 
@@ -22,11 +22,7 @@ export const Navbar = () => {
           tabIndex={0}
           className="flex-row @lg:none alignself-center p-5 pointer"
           onPointerDown={() => {
-            dispatch({
-              type: state.navState.isOpen
-                ? NavActionTypes.Close
-                : NavActionTypes.Open,
-            });
+            dispatch(ToggleNav(state.navState.isOpen));
           }}
         >
           <svg

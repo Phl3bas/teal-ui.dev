@@ -2,7 +2,7 @@ import React from "react";
 import { useClickAway, useMedia } from "react-use";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
-import { NavActionTypes } from "../../actions";
+import { CloseNav, OpenNav } from "../../actions";
 import { AppContext } from "../../store";
 
 interface Props {
@@ -15,7 +15,7 @@ export const Sidebar = ({ children }: Props) => {
 
   useClickAway(ref, () => {
     if (state.navState.isOpen) {
-      dispatch({ type: NavActionTypes.Close });
+      dispatch(CloseNav());
     }
   });
 
@@ -23,7 +23,7 @@ export const Sidebar = ({ children }: Props) => {
 
   React.useEffect(() => {
     if (isWide) {
-      dispatch({ type: NavActionTypes.Close });
+      dispatch(OpenNav());
     }
   }, [isWide]);
 
@@ -33,21 +33,23 @@ export const Sidebar = ({ children }: Props) => {
         ref={ref}
         className={`${
           state.navState.isOpen ? "" : "hide-l"
-        } @lg:show transition fixed @lg:static ontop px-12 min-w-25 @lg:w-3/12 @lg:flex-col`}
+        } @lg:show transition fixed @lg:static ontop flex-auto @lg:flex-col `}
       >
-        <div
-          className="flex-col h-full fixed py-0 px-0 min-w-25 w-25  bg-white-000 shadow-sm @lg:shadow-none"
-          style={{
-            marginLeft: "-25px",
-          }}
-        >
-          <SimpleBar style={{ height: "95%" }} autoHide={true}>
+        <div className="flex-col h-full fixed w-25 shadow-sm @lg:shadow-none bg-white-000 @lg:bg-transparent">
+          <SimpleBar
+            style={{
+              height: "90%",
+              width: "101%",
+              padding: "2px;",
+            }}
+            autoHide={true}
+          >
             {children}
           </SimpleBar>
         </div>
       </aside>
       {state.navState.isOpen && (
-        <div className="fixed h-screen w-screen bg-a-60 bg-black-200"></div>
+        <div className="fixed h-screen w-screen bg-a-60"></div>
       )}
     </>
   );
