@@ -11,9 +11,9 @@ const NavListItem = ({ title, path }: NavListItemProps) => {
   const { dispatch } = React.useContext(AppContext);
 
   return (
-    <li>
+    <li className="my-3">
       <Link
-        className="text-decoration-none text-h5 flex-col pl-10  @lg:w-full @lg:text-body text-cool-grey-600 text-cool-grey-600:visited text-black-300:hover bg-teal-000:hover radius-md px-0 py-3"
+        className="text-decoration-none text-h5 flex-col pl-14  @lg:w-11/12 @lg:text-body text-cool-grey-600 text-cool-grey-600:visited text-black-300:hover bg-teal-100:hover radius-md px-0 py-3"
         to={path}
         onClick={() => dispatch({ type: NavActionTypes.Close })}
       >

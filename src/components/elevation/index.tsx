@@ -11,7 +11,7 @@ const Box = ({ shadow, inset = false }: BoxProps) => {
 
   return (
     <div
-      className="grid bg-white-000 placecontent-center text-cool-grey-600 h-17"
+      className="grid bg-white-000 placecontent-center text-cool-grey-600 h-20"
       style={{
         boxShadow: `var(${shadowToken}${shadow + (inset ? 1 : 0)})`,
       }}

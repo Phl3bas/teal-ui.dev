@@ -5,7 +5,7 @@ import Logo from "../assets/svg/tealeaf-primary.svg";
 function IndexPage() {
   return (
     <div className="h-screen m-auto flex-col justifycontent-center alignitems-center container">
-      <Logo className="w-24 @lg:w-25" />
+      <Logo className="w-27 @lg:w-29" />
       <p className="text-grey-600 text-h4 m-7 mb-13">
         A Beautifully Modular UI Toolkit
       </p>

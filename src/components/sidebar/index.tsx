@@ -33,10 +33,10 @@ export const Sidebar = ({ children }: Props) => {
         ref={ref}
         className={`${
           state.navState.isOpen ? "" : "hide-l"
-        } @lg:show transition fixed @lg:static ontop px-12 min-w-21 @lg:w-3/12 @lg:flex-col`}
+        } @lg:show transition fixed @lg:static ontop px-12 min-w-25 @lg:w-3/12 @lg:flex-col`}
       >
         <div
-          className="flex-col h-full fixed py-0 px-0 min-w-22 w-22  bg-white-000 shadow-sm @lg:shadow-none"
+          className="flex-col h-full fixed py-0 px-0 min-w-25 w-25  bg-white-000 shadow-sm @lg:shadow-none"
           style={{
             marginLeft: "-25px",
           }}
@@ -47,7 +47,7 @@ export const Sidebar = ({ children }: Props) => {
         </div>
       </aside>
       {state.navState.isOpen && (
-        <div className="fixed h-screen w-screen bg-a-50 bg-black-200"></div>
+        <div className="fixed h-screen w-screen bg-a-60 bg-black-200"></div>
       )}
     </>
   );

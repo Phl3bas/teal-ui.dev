@@ -10,10 +10,10 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="flex-row sticky h-14 top-0 bg-white-000 alignitems-center  p-7"
+      className="flex-row sticky h-16 top-0 bg-white-000 alignitems-center p-7"
       style={{
         top: 0,
-        boxShadow: "0 4px 20px 1px rgba(200,200,200,0.15)",
+        boxShadow: "0 4px 20px 1px rgba(200,200,200,0.3)",
         zIndex: 10000,
       }}
     >
@@ -56,7 +56,7 @@ export const Navbar = () => {
             <Github height="40" width="40" />
           </a>
           <form className="none @lg:initial" action="">
-            <select name="" id="" className="w-16">
+            <select name="" id="" className="w-19">
               <option value="0.0.1">0.0.1</option>
             </select>
           </form>

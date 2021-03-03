@@ -79,7 +79,7 @@ export const DocNav = (): JSX.Element => {
       {Object.keys(navigation).map((key, i) => (
         <details
           open={key === "Getting Started" && true}
-          className="shadow-none mb-5 overflow-x-hidden "
+          className="shadow-none mb-5 overflow-x-hidden border-none:focus border-none:active"
           key={i}
         >
           <summary className="shadow-none text-black-300 text-h5 @lg:text-body">

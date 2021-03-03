@@ -40,7 +40,7 @@ export const Palette = ({ colors, shouldSort = false }: Props) => {
           className="flex-row mb-10 gap-11 justifycontent-between alignitems-center flex-wrap"
           key={hue}
         >
-          <div className="flex-column min-w-17 justifycontent-around alignitems-end">
+          <div className="flex-column min-w-20 justifycontent-around alignitems-end">
             <h6 className="m-0">{capitalize(hue)}</h6>
             <code className="text-cool-grey-600 m-0 text-sm">--tl-{hue}</code>
           </div>
@@ -58,7 +58,7 @@ export const Palette = ({ colors, shouldSort = false }: Props) => {
               .map((color) => (
                 <div key={color} className="flex-column flex-auto mb-10">
                   <div
-                    className="shadow-xs h-13 min-w-15 max-w-22"
+                    className="shadow-xs h-15 min-w-17 max-w-25"
                     style={{
                       background: colors[hue][color],
                     }}

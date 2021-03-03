@@ -22,7 +22,7 @@ export default ({ pageContext, children }: Props) => {
             <DocNav />
           </Sidebar>
           <article className="w-full @lg:w-11/12">
-            <div className="p-13 radius-md @lg:shadow-xs mb-19 min-h-screen">
+            <div className="p-16 radius-md @lg:shadow-xs mb-19 min-h-screen">
               {frontmatter && (
                 <PageHeader
                   title={frontmatter.title}
