@@ -4,9 +4,9 @@ import Logo from "../assets/svg/tealeaf-primary.svg";
 
 function IndexPage() {
   return (
-    <div className="h-screen m-auto flex-col justifycontent-center alignitems-center container">
-      <Logo className="w-27 @lg:w-29" />
-      <p className="text-grey-600 text-h4 m-7 mb-13">
+    <div className="h-screen m-auto flex-col justifycontent-center alignitems-center w-30">
+      <Logo className="w-24 @lg:w-30" />
+      <p className="text-grey-600 text-h5 m-7 mb-13">
         A Beautifully Modular UI Toolkit
       </p>
       <div className="flex-row">
@@ -19,7 +19,7 @@ function IndexPage() {
         </a>
         <Link
           role="button"
-          className="primary-gradient text-white-00 text-white-000:visited"
+          className="primary-gradient text-white-000 text-white-000:visited"
           to={"/docs"}
         >
           Docs
